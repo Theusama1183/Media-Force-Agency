@@ -1,1676 +1,2351 @@
-/*
- * Plugin: Web Slide Navigation System
- * Demo Link: https://uxwing.com/webslide/
- * Author: UXWing
- * License: http://codecanyon.net/licenses/standard
-*/
-
-/*------------------------------------------*/
-/*  Desktop Base CSS
---------------------------------------------*/
-
-.wsmenu html,
-.wsmenu body,
-.wsmenu iframe,
-.wsmenu h1,
-.wsmenu h2,
-.wsmenu h3,
-.wsmenu h4,
-.wsmenu h5,
-.wsmenu h6 {
-  -webkit-font-smoothing: subpixel-antialiased;
-  font-smoothing: antialiased;
-  font-smooth: antialiased;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -webkit-font-smoothing: subpixel-antialiased;
-  font-smoothing: subpixel-antialiased;
-  font-smooth: subpixel-antialiased;
-}
-
-.wsmenu .cl {
-  clear: both;
-}
-
-.wsmenu img,
-object,
-embed,
-video {
-  border: 0 none;
-  max-width: 100%;
-}
-
-.wsmenu a:focus {
-  outline: none;
-}
-
-.wsmenu:before,
-.wsmenu:after {
-  content: "";
-  display: table;
-}
-
-.wsmenu:after {
-  clear: both;
-}
-
-/*------------------------------------------*/
-/*  Desktop Main Menu CSS
---------------------------------------------*/
-
-.wsmenucontainer {
-  background-size: cover;
-  background-image: url(../images/bg01.jpg);
-  overflow: hidden;
-  background-attachment: fixed;
-  background-position: 50% 0;
-  background-repeat: no-repeat;
-}
-
-.wsmainfull {
-  width: 100%;
-  height: auto;
-  background-color: #fff !important;
-  z-index: 999;
-  -webkit-box-shadow: 0 2px 3px rgba(96, 96, 96, 0.1);
-  -moz-box-shadow: 0 2px 3px rgba(96, 96, 96, 0.1);
-  box-shadow: 0 2px 3px rgba(96, 96, 96, 0.1);
-  -webkit-transition: all 450ms ease-in-out;
-  -moz-transition: all 450ms ease-in-out;
-  -o-transition: all 450ms ease-in-out;
-  -ms-transition: all 450ms ease-in-out;
-  transition: all 450ms ease-in-out;
-}
-
-.wsmainwp {
-  margin: 0 auto;
-  max-width: 1140px;
-  padding: 0 15px;
-  position: relative;
-}
-
-/* Header Logo */
-.desktoplogo {
-  padding: 0;
-  margin: 0;
-  float: left;
-  line-height: 70px;
-}
-
-.desktoplogo img {
-  vertical-align: middle;
-}
-
-/* Navigation Menu */
-.wsmenu {
-  padding: 0;
-  float: right;
-  display: block;
-}
-
-.wsmenu > .wsmenu-list {
-  text-align: left;
-  margin: 0 auto 0 auto;
-  width: 100%;
-  display: block;
-  padding: 0;
-}
-
-.wsmenu > .wsmenu-list > li {
-  text-align: center;
-  display: block;
-  padding: 0;
-  margin: 0;
-  float: left;
-}
-
-.wsmenu > .wsmenu-list > li > a {
-  display: block;
-  color: #666;
-  font-family: "Oxygen", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  padding: 10px 32px 10px 18px;
-  line-height: 50px;
-  text-transform: uppercase;
-  text-decoration: none;
-  position: relative;
-}
-
-.wsmenu > .wsmenu-list > li > a.last-link {
-  padding: 10px 0px 10px 0;
-}
-
-.wsmenu > .wsmenu-list > li > a.callusbtn {
-  font-size: 15px;
-}
-
-.wsmenu > .wsmenu-list > li > a.callusbtn i {
-  font-size: 13px;
-  margin-top: 1px;
-  margin-right: 1px;
-}
-
-.tra-menu .wsmenu > .wsmenu-list > li > a,
-.aqua-menu .wsmenu > .wsmenu-list > li > a,
-.blue-menu .wsmenu > .wsmenu-list > li > a {
-  color: #fff;
-}
-
-.white-menu .wsmenu > .wsmenu-list > li > a {
-  color: #444;
-}
-
-.tra-menu .wsmenu.dark-txt > .wsmenu-list > li > a {
-  color: #333;
-}
-
-.wsmenu > .wsmenu-list > li:last-child > a {
-  border-right: 0px;
-}
-
-.wsmenu > .wsmenu-list > li:hover > a {
-  color: #f0f0f0;
-}
-
-.white-menu .wsmenu > .wsmenu-list > li:hover > a {
-  color: #171819;
-}
-
-.wsmenu > .wsmenu-list > li a.menuhomeicon {
-  padding-left: 29px;
-  padding-right: 29px;
-}
-
-.wsmenu > .wsmenu-list > li > a i {
-  display: inline-block;
-  font-size: 16px;
-  line-height: inherit;
-  margin-right: 12px;
-  vertical-align: top;
-}
-
-.wsmenu > .wsmenu-list > li > a.menuhomeicon i {
-  margin-right: 0px;
-  font-size: 15px;
-}
-
-.wsmenu > .wsmenu-list > li > a .wsarrow:after {
-  border-left: 4px solid rgba(0, 0, 0, 0);
-  border-right: 4px solid rgba(0, 0, 0, 0);
-  border-top: 4px solid;
-  content: "";
-  float: right;
-  right: 15px;
-  height: 0;
-  margin: 0 0 0 14px;
-  position: absolute;
-  text-align: right;
-  top: 33px;
-  width: 0;
-}
-
-/* Desktop Search Bar */
-.wsmenu > .wsmenu-list > li.rightmenu {
-  float: right;
-}
-
-.wsmenu > .wsmenu-list > li.rightmenu a {
-  padding: 0px 30px 0px 20px;
-  border-right: none;
-}
-
-.wsmenu > .wsmenu-list > li.rightmenu a i {
-  font-size: 15px;
-}
-
-.wsmenu > .wsmenu-list > li.rightmenu {
-  float: right;
-}
-
-.wsmenu > .wsmenu-list > li.rightmenu:before,
-.wsmenu-list > li.rightmenu:after {
-  content: "";
-  display: table;
-}
-
-.wsmenu > .wsmenu-list > li.rightmenu:after {
-  clear: both;
-}
-
-.wsmenu > .wsmenu-list > li.rightmenu > .topmenusearch {
-  float: right;
-  width: 210px;
-  height: 39px;
-  position: relative;
-  margin: 16px 0px 0px 0px;
-}
-
-.wsmenu > .wsmenu-list > li.rightmenu > .topmenusearch .searchicon {
-  -webkit-transition: all 0.7s ease 0s;
-  -moz-transition: all 0.7s ease 0s;
-  -o-transition: all 0.7s ease 0s;
-  transition: all 0.7s ease 0s;
-}
-
-.wsmenu > .wsmenu-list > li.rightmenu > .topmenusearch input {
-  width: 100%;
-  position: relative;
-  float: right;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  border: 0;
-  padding: 0;
-  margin: 0;
-  text-indent: 15px;
-  height: 39px;
-  z-index: 2;
-  outline: none;
-  color: #333;
-  background-color: #efefef;
-  -webkit-transition: all 0.7s ease 0s;
-  -moz-transition: all 0.7s ease 0s;
-  -o-transition: all 0.7s ease 0s;
-  transition: all 0.7s ease 0s;
-  font-size: 12px;
-}
-
-.wsmenu > .wsmenu-list > li.rightmenu > .topmenusearch input::placeholder {
-  color: #a9a9a9;
-}
-
-.wsmenu > .wsmenu-list > li.rightmenu > .topmenusearch input:focus {
-  color: #333;
-  width: 220px;
-}
-
-.wsmenu
-  > .wsmenu-list
-  > li.rightmenu
-  > .topmenusearch
-  input:focus
-  ~ .btnstyle
-  i {
-  color: #000;
-  opacity: 1;
-}
-
-.wsmenu
-  > .wsmenu-list
-  > li.rightmenu
-  > .topmenusearch
-  input:focus
-  ~ .searchicon {
-  opacity: 1;
-  z-index: 3;
-  color: #ffffff;
-}
-
-.wsmenu > .wsmenu-list > li.rightmenu > .topmenusearch .btnstyle {
-  top: 0px;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 40px;
-  line-height: 30px;
-  z-index: 1;
-  cursor: pointer;
-  opacity: 0.3;
-  color: #333;
-  z-index: 1000;
-  background-color: transparent;
-  border: solid 0px;
-  -webkit-transition: all 0.7s ease 0s;
-  -moz-transition: all 0.7s ease 0s;
-  -o-transition: all 0.7s ease 0s;
-  transition: all 0.7s ease 0s;
-}
-
-.wsmenu > .wsmenu-list > li.rightmenu > .topmenusearch .btnstyle i {
-  line-height: 37px;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-.wsmenu > .wsmenu-list > li.rightmenu > .topmenusearch .btnstyle:hover i {
-  opacity: 1;
-}
-
-.wsmenu > .wsmenu-list > li.rightmenu {
-  zoom: 1;
-}
-
-/*------------------------------------------*/
-/*  Desktop Drop Down Menu CSS
---------------------------------------------*/
-
-.wsmenu > .wsmenu-list > li > ul.sub-menu {
-  position: absolute;
-  top: 70px;
-  z-index: 1000;
-  margin: 0px;
-  padding: 9px 15px;
-  min-width: 200px;
-  background-color: #fff;
-  border: solid 1px #eee;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-}
-
-.wsmenu > .wsmenu-list > li > ul.sub-menu > li {
-  position: relative;
-  margin: 0px;
-  padding: 0px;
-  display: block;
-  border-bottom: 1px dashed #c0c0c0;
-}
-
-.wsmenu > .wsmenu-list > li > ul.sub-menu > li:last-child {
-  border-bottom: none;
-}
-
-.wsmenu > .wsmenu-list > li > ul.sub-menu > li > a {
-  position: relative;
-  background-image: none;
-  border-right: 0 none;
-  text-align: left;
-  display: block;
-  padding: 9px;
-  text-transform: none;
-  color: #888;
-  font-size: 15px;
-  line-height: 22px;
-  font-weight: 400;
-  letter-spacing: 0;
-  border-right: 0px solid;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-transition: all 400ms ease-in-out;
-  -moz-transition: all 400ms ease-in-out;
-  -o-transition: all 400ms ease-in-out;
-  -ms-transition: all 400ms ease-in-out;
-  transition: all 400ms ease-in-out;
-}
-
-.wsmenu > .wsmenu-list > li > ul.sub-menu > li > a:hover {
-  padding: 9px 9px 9px 20px;
-}
-
-.wsmenu > .wsmenu-list > li > ul.sub-menu > li > a > i {
-  position: absolute;
-  top: 12px;
-  right: 0;
-}
-
-.wsmenu > .wsmenu-list > li > ul.sub-menu > li > ul.sub-menu {
-  min-width: 200px;
-  position: absolute;
-  left: 100%;
-  top: 0;
-  margin: 0;
-  padding: 0 15px;
-  list-style: none;
-  background-color: #fff;
-  border: solid 1px #eee;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-}
-
-.wsmenu > .wsmenu-list > li > ul.sub-menu > li > ul.sub-menu > li {
-  position: relative;
-  margin: 0px;
-  padding: 0px;
-  display: block;
-  border-bottom: 1px dashed #c0c0c0;
-}
-
-.wsmenu > .wsmenu-list > li > ul.sub-menu > li > ul.sub-menu > li:last-child {
-  border-bottom: none;
-}
-
-.wsmenu > .wsmenu-list > li > ul.sub-menu > li > ul.sub-menu > li > a {
-  position: relative;
-  background-image: none;
-  border-right: 0 none;
-  text-align: left;
-  display: block;
-  padding: 9px;
-  text-transform: none;
-  color: #888;
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 400;
-  letter-spacing: normal;
-  border-right: 0px solid;
-  -webkit-transition: all 400ms ease-in-out;
-  -moz-transition: all 400ms ease-in-out;
-  -o-transition: all 400ms ease-in-out;
-  -ms-transition: all 400ms ease-in-out;
-  transition: all 400ms ease-in-out;
-}
-
-.wsmenu > .wsmenu-list > li > ul.sub-menu > li > ul.sub-menu > li > a:hover {
-  padding: 8px 15px 8px 23px;
-}
-
-.wsmenu > .wsmenu-list > li > ul.sub-menu > li > ul.sub-menu > li > a > i {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-}
-
-.wsmenu
-  > .wsmenu-list
-  > li
-  > ul.sub-menu
-  > li
-  > ul.sub-menu
-  > li
-  > ul.sub-menu {
-  min-width: 200px;
-  position: absolute;
-  left: 100%;
-  top: 0;
-  margin: 0px;
-  list-style: none;
-  padding: 0px;
-  background-color: #fff;
-  border: solid 1px #eee;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-}
-
-.wsmenu
-  > .wsmenu-list
-  > li
-  > ul.sub-menu
-  > li
-  > ul.sub-menu
-  > li
-  > ul.sub-menu
-  > li {
-  position: relative;
-  margin: 0px;
-  padding: 0px;
-  display: block;
-}
-
-.wsmenu
-  > .wsmenu-list
-  > li
-  > ul.sub-menu
-  > li
-  > ul.sub-menu
-  > li
-  > ul.sub-menu
-  > li
-  > a {
-  background-image: none;
-  border-right: 0 none;
-  text-align: left;
-  display: block;
-  padding: 9px;
-  text-transform: none;
-  color: #888;
-  font-size: 16px;
-  font-family: "Oxygen", sans-serif;
-  line-height: 22px;
-  font-weight: 400;
-  letter-spacing: normal;
-  border-right: 0px solid;
-  -webkit-transition: all 400ms ease-in-out;
-  -moz-transition: all 400ms ease-in-out;
-  -o-transition: all 400ms ease-in-out;
-  -ms-transition: all 400ms ease-in-out;
-  transition: all 400ms ease-in-out;
-}
-
-.wsmenu
-  > .wsmenu-list
-  > li
-  > ul.sub-menu
-  > li
-  > ul.sub-menu
-  > li
-  > ul.sub-menu
-  > li
-  > a:hover {
-  padding: 9px 9px 9px 20px;
-}
-
-.wsmenu
-  > .wsmenu-list
-  > li
-  > ul.sub-menu
-  > li
-  > ul.sub-menu
-  > li
-  > ul.sub-menu
-  > li
-  > a
-  > i {
-  margin-left: 9px;
-}
-
-/*------------------------------------------*/
-/*  Desktop Mega Menus CSS
---------------------------------------------*/
-
-.wsmenu > .wsmenu-list > li > .wsmegamenu {
-  width: 100%;
-  left: 0px;
-  position: absolute;
-  top: 70px;
-  color: #000;
-  z-index: 1000;
-  margin: 0px;
-  text-align: left;
-  padding: 20px 30px;
-  border: solid 1px #eee;
-  background-color: #fff;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-}
-
-.wsmenu > .wsmenu-list > li > .wsmegamenu.halfmenu {
-  padding: 20px 20px;
-}
-
-.wsmenu > .wsmenu-list > li > .wsmegamenu .title {
-  padding: 9px 5px 9px 0px;
-  color: #222;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin: 0px 0px 7px 0px;
-  text-align: left;
-  height: 39px;
-}
-
-.wsmegamenu h5.h5-xs {
-  font-size: 1.05rem;
-  font-weight: 700;
-  margin-top: 18px;
-}
-
-.wsmegamenu h5.h5-xs a {
-  color: #555;
-}
-
-.wsmegamenu h5.h5-xs a:hover {
-  color: #272829;
-  text-decoration: underline;
-}
-
-.wsmenu > .wsmenu-list > li > .wsmegamenu .carousel-control-next {
-  opacity: 0.8;
-}
-
-.wsmenu > .wsmenu-list > li > .wsmegamenu .carousel-control-prev {
-  opacity: 0.8;
-}
-
-.wsmenu > .wsmenu-list > li > .wsmegamenu .carousel-caption {
-  bottom: 0px;
-  background-color: rgba(0, 0, 0, 0.7);
-  font-size: 13px;
-  height: 31px;
-  left: 0;
-  padding: 7px 0;
-  right: 0;
-  width: 100%;
-}
-
-.wsmenu > .wsmenu-list > li > .wsmegamenu .wsmwnutxt {
-  width: 100%;
-  color: #888;
-  font-size: 16px;
-  font-weight: 400;
-  text-align: justify;
-  margin-top: 0;
-}
-
-.wsmenu > .wsmenu-list > li > .wsmegamenu .link-list li {
-  display: block;
-  text-align: center;
-  white-space: nowrap;
-  text-align: left;
-  border-bottom: 1px dashed #c0c0c0;
-}
-
-.wsmenu > .wsmenu-list > li > .wsmegamenu .link-list li.title,
-.wsmenu > .wsmenu-list > li > .wsmegamenu .link-list li:last-child {
-  border-bottom: none;
-}
-
-.wsmenu > .wsmenu-list > li > .wsmegamenu .link-list li a {
-  line-height: 18px;
-  border-right: none;
-  text-align: left;
-  padding: 15px 0px;
-  background: #fff;
-  background-image: none;
-  border-right: 0 none;
-  display: block;
-  background-color: #fff;
-  color: #888;
-  font-size: 16px;
-  font-family: "Oxygen", sans-serif;
-  font-weight: 400;
-  -webkit-transition: all 400ms ease-in-out;
-  -moz-transition: all 400ms ease-in-out;
-  -o-transition: all 400ms ease-in-out;
-  -ms-transition: all 400ms ease-in-out;
-  transition: all 400ms ease-in-out;
-}
-
-.wsmenu > .wsmenu-list > li > .wsmegamenu .link-list li a:hover {
-  padding: 15px 0 15px 10px;
-}
-
-.wsmenu > .wsmenu-list > li > .wsmegamenu .mrgtop {
-  margin-top: 15px;
-}
-
-.wsmenu > .wsmenu-list > li > .wsmegamenu .show-grid div {
-  padding-bottom: 10px;
-  padding-top: 10px;
-  background-color: #dbdbdb;
-  border: 1px solid #e7e7e7;
-  color: #6a6a6a;
-  margin: 2px 0px;
-  font-size: 13px;
-}
-
-/*= Desktop Half Menu CSS =*/
-.wsmenu > .wsmenu-list > li > .wsmegamenu.halfmenu {
-  width: 40%;
-  right: auto;
-  left: auto;
-}
-
-.wsmenu > .wsmenu-list > li > .wsmegamenu.halfdiv {
-  width: 35%;
-  right: auto;
-  left: auto;
-}
-
-/*= Desktop HTML Form Menu CSS =*/
-.wsmenu > .wsmenu-list > li > .wsmegamenu .menu_form {
-  width: 100%;
-  display: block;
-}
-
-.wsmenu > .wsmenu-list > li > .wsmegamenu .menu_form input[type="text"] {
-  width: 100%;
-  border: 1px solid #e2e2e2;
-  color: #000;
-  font-size: 13px;
-  padding: 8px 5px;
-  margin-bottom: 8px;
-}
-
-.wsmenu > .wsmenu-list > li > .wsmegamenu .menu_form textarea {
-  width: 100%;
-  border: 1px solid #e2e2e2;
-  color: #000;
-  font-size: 13px;
-  padding: 8px 5px;
-  margin-bottom: 8px;
-  min-height: 122px;
-}
-
-.wsmenu > .wsmenu-list > li > .wsmegamenu .menu_form input[type="submit"] {
-  width: 25%;
-  display: block;
-  height: 32px;
-  float: right;
-  border: none;
-  margin-right: 15px;
-  cursor: pointer;
-  background-color: #e1e1e1;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-}
-
-.wsmenu > .wsmenu-list > li > .wsmegamenu .menu_form input[type="button"] {
-  width: 25%;
-  display: block;
-  height: 32px;
-  float: right;
-  border: none;
-  cursor: pointer;
-  background-color: #e1e1e1;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-}
-
-.wsmenu > .wsmenu-list > li > .wsmegamenu .carousel-inner .item img {
-  width: 100%;
-}
-
-.wsmenu > .wsmenu-list > li > .wsmegamenu .carousel-caption {
-  bottom: 0px;
-  background-color: rgba(0, 0, 0, 0.7);
-  font-size: 13px;
-  height: 31px;
-  left: 0;
-  padding: 7px 0;
-  right: 0;
-  width: 100%;
-}
-
-.wsmenu > .wsmenu-list > li > .wsmegamenu .typography-text {
-  padding: 0px 0px;
-  font-size: 14px;
-}
-
-.wsmenu > .wsmenu-list > li > .wsmegamenu .typography-text ul {
-  padding: 0px 0px;
-  margin: 0px;
-}
-
-.wsmenu > .wsmenu-list > li > .wsmegamenu .typography-text p {
-  text-align: justify;
-  line-height: 24px;
-  color: #656565;
-}
-
-.wsmenu > .wsmenu-list > li > .wsmegamenu .typography-text ul li {
-  display: block;
-  padding: 2px 0px;
-  line-height: 22px;
-}
-
-.wsmenu > .wsmenu-list > li > .wsmegamenu .typography-text ul li a {
-  color: #656565;
-}
-
-/*------------------------------------------*/
-/*  Desktop Extra CSS
---------------------------------------------*/
-
-.wsmobileheader {
-  display: none;
-}
-
-.overlapblackbg {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.wsmenu .wsmenu-click {
-  display: none;
-}
-
-.wsmenu .wsmenu-click02 {
-  display: none;
-}
-
-.hometext {
-  display: none;
-}
-
-/*==============================================================================
-                              Start Mobile CSS
-===============================================================================*/
-
-/* ================== Mobile Menu Change Brake Point ================== */
-@media only screen and (max-width: 991px) {
-  /* ================== Mobile Base CSS ================== */
-  html {
-    overflow: hidden;
-    height: 100%;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  body {
-    height: 100%;
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
-
-  body.wsactive {
-    overflow: hidden;
-  }
-
-  /* ================== Mobile Main Menu CSS ================== */
-  .desktoplogo {
-    display: none;
-  }
-
-  .wsmainfull {
-    height: 0;
-  }
-
-  .wsmenucontainer {
-    background-attachment: local;
-    background-position: 33% 0%;
-  }
-
-  .wsmenu {
-    width: 100%;
-    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-    left: 0;
-    overflow-y: hidden;
-    padding: 0;
-    top: 0;
-    visibility: hidden;
-    position: fixed;
-    margin: 0px;
-  }
-
-  .wsmenu > .wsmenu-list {
-    height: auto;
-    min-height: 100%;
-    width: 240px;
-    width: 300px;
-    background: #fff;
-    padding-bottom: 0;
-    margin-left: -240px;
-    margin-left: -300px;
-    display: block;
-    text-align: center;
-    -webkit-transition: all 0.25s ease-in-out;
-    -moz-transition: all 0.25s ease-in-out;
-    -o-transition: all 0.25s ease-in-out;
-    -ms-transition: all 0.25s ease-in-out;
-    transition: all 0.25s ease-in-out;
-  }
-
-  .wsmenu > .wsmenu-list > li {
-    width: 100%;
-    display: block;
-    float: none;
-    border-right: none;
-    background-color: transparent;
-    position: relative;
-    white-space: inherit;
-    clear: right;
-  }
-
-  @supports (-webkit-overflow-scrolling: touch) {
-    .wsmenu > .wsmenu-list > li:last-child {
-      padding-bottom: 110px;
-    }
-  }
-
-  .wsmenu > .wsmenu-list > li > a {
-    padding: 12px 32px 12px 17px;
-    font-size: 15px;
-    text-align: left;
-    border-right: solid 0px;
-    background-color: transparent;
-    color: #666666;
-    line-height: 25px;
-    border-bottom: 1px solid;
-    border-bottom-color: rgba(0, 0, 0, 0.13);
-    position: static;
-  }
-
-  .wsmenu > .wsmenu-list > li a.menuhomeicon {
-    padding-left: 17px;
-    padding-right: 17px;
-    border-top: solid 1px rgba(0, 0, 0, 0.13);
-  }
-
-  .wsmenu > .wsmenu-list > li > a.menuhomeicon i {
-    margin-right: 2px;
-    font-size: 13px;
-  }
-
-  .wsmenu > .wsmenu-list > li > a > i {
-    font-size: 14px;
-    color: #bfbfbf;
-  }
-
-  .wsmenu > .wsmenu-list > li > a .wsarrow:after {
-    display: none;
-  }
-
-  .wsmenu > .wsmenu-list > li:hover > a {
-    background-color: rgba(0, 0, 0, 0.08);
-    text-decoration: none;
-  }
-
-  .wsmenu > .wsmenu-list > li > a > .hometext {
-    display: inline-block;
-  }
-
-  /* ================== Mobile Slide Down Links CSS ================== */
-  .wsmenu > .wsmenu-list > li > ul.sub-menu {
-    display: none;
-    position: relative;
-    top: 0px;
-    background-color: #fff;
-    border: none;
-    padding: 0px;
-    opacity: 1;
-    visibility: visible;
-    -webkit-transform: none;
-    -moz-transform: none;
-    -ms-transform: none;
-    -o-transform: none;
-    transform: none;
-    -webkit-transition: inherit;
-    -moz-transition: inherit;
-    transition: inherit;
-    -webkit-transform-style: flat;
-  }
-
-  .wsmenu > .wsmenu-list > li > ul.sub-menu > li > a {
-    line-height: 20px;
-    font-size: 13px;
-    padding: 10px 0px 10px 16px;
-    color: #383838;
-  }
-
-  .wsmenu > .wsmenu-list > li > ul.sub-menu > li span + a {
-    padding-right: 30px;
-  }
-
-  .wsmenu > .wsmenu-list > li > ul.sub-menu > li > a > i {
-    display: none;
-  }
-
-  .wsmenu > .wsmenu-list > li > ul.sub-menu > li > a:hover {
-    background-color: #e7e7e7;
-    color: #666666;
-    text-decoration: underline;
-  }
-
-  .wsmenu > .wsmenu-list > li > ul.sub-menu li:hover > a {
-    background-color: #e7e7e7;
-    color: #666666;
-  }
-
-  .wsmenu > .wsmenu-list > li > ul.sub-menu > li > ul.sub-menu {
-    width: 100%;
-    position: static;
-    left: 100%;
-    top: 0;
-    display: none;
-    margin: 0px;
-    padding: 0px;
-    border: solid 0px;
-    transform: none;
-    opacity: 1;
-    visibility: visible;
-    -webkit-transform: none;
-    -moz-transform: none;
-    -ms-transform: none;
-    -o-transform: none;
-    transform: none;
-    -webkit-transition: inherit;
-    -moz-transition: inherit;
-    transition: inherit;
-    -webkit-transform-style: flat;
-  }
-
-  .wsmenu > .wsmenu-list > li > ul.sub-menu > li > ul.sub-menu > li {
-    margin: 0px 0px 0px 0px;
-    padding: 0px;
-    position: relative;
-  }
-
-  .wsmenu > .wsmenu-list > li > ul.sub-menu > li > ul.sub-menu > li > a {
-    line-height: 20px;
-    font-size: 13px;
-    padding: 10px 0px 10px 26px;
-    color: #383838;
-  }
-
-  .wsmenu > .wsmenu-list > li > ul.sub-menu > li > ul.sub-menu > li span + a {
-    padding-right: 30px;
-  }
-
-  .wsmenu > .wsmenu-list > li > ul.sub-menu > li > ul.sub-menu > li > a > i {
-    display: none;
-  }
-
-  .wsmenu > .wsmenu-list > li > ul.sub-menu > li > ul.sub-menu > li > a:hover {
-    background-color: #e7e7e7;
-    color: #666666;
-    text-decoration: underline;
-  }
-
-  .wsmenu > .wsmenu-list > li > ul.sub-menu > li > ul.sub-menu > li > a.active {
-    color: #000;
-  }
-
-  .wsmenu > .wsmenu-list > li > ul.sub-menu > li > ul.sub-menu > li:hover > a {
-    color: #000;
-  }
-
-  .wsmenu
-    > .wsmenu-list
-    > li
-    > ul.sub-menu
-    > li
-    > ul.sub-menu
-    > li
-    > ul.sub-menu {
-    width: 100%;
-    position: static;
-    left: 100%;
-    top: 0;
-    display: none;
-    margin: 0px;
-    padding: 0px;
-    border: solid 0px;
-    transform: none;
-    opacity: 1;
-    visibility: visible;
-    -webkit-transform: none;
-    -moz-transform: none;
-    -ms-transform: none;
-    -o-transform: none;
-    transform: none;
-    -webkit-transition: inherit;
-    -moz-transition: inherit;
-    transition: inherit;
-    -webkit-transform-style: flat;
-  }
-
-  .wsmenu
-    > .wsmenu-list
-    > li
-    > ul.sub-menu
-    > li
-    > ul.sub-menu
-    > li
-    > ul.sub-menu
-    > li {
-    margin: 0px 0px 0px 0px;
-  }
-
-  .wsmenu
-    > .wsmenu-list
-    > li
-    > ul.sub-menu
-    > li
-    > ul.sub-menu
-    > li
-    > ul.sub-menu
-    > li
-    > a {
-    line-height: 20px;
-    font-size: 13px;
-    padding: 10px 0px 10px 34px;
-    color: #383838;
-  }
-
-  .wsmenu
-    > .wsmenu-list
-    > li
-    > ul.sub-menu
-    > li
-    > ul.sub-menu
-    > li
-    > ul.sub-menu
-    > li
-    span
-    + a {
-    padding-right: 30px;
-  }
-
-  .wsmenu
-    > .wsmenu-list
-    > li
-    > ul.sub-menu
-    > li
-    > ul.sub-menu
-    > li
-    > ul.sub-menu
-    > li
-    > a
-    > i {
-    display: none;
-  }
-
-  .wsmenu
-    > .wsmenu-list
-    > li
-    > ul.sub-menu
-    > li
-    > ul.sub-menu
-    > li
-    > ul.sub-menu
-    > li
-    > a:hover {
-    background-color: #e7e7e7;
-    color: #666666;
-    text-decoration: underline;
-  }
-
-  .wsmenu
-    > .wsmenu-list
-    > li
-    > ul.sub-menu
-    > li
-    > ul.sub-menu
-    > li
-    > ul.sub-menu
-    > li
-    > a.active {
-    color: #000;
-  }
-
-  /* ================== Mobile Mega Menus CSS  ================== */
-  .wsmenu > .wsmenu-list > li > .wsmegamenu {
-    color: #666666;
-    display: none;
-    position: relative;
-    top: 0px;
-    padding: 10px 0px;
-    border: solid 0px;
-    transform: none;
-    opacity: 1;
-    visibility: visible;
-    -webkit-transform: none;
-    -moz-transform: none;
-    -ms-transform: none;
-    -o-transform: none;
-    transform: none;
-    -webkit-transition: inherit;
-    -moz-transition: inherit;
-    transition: inherit;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.13);
-    -webkit-transform-style: flat;
-  }
-
-  .wsmenu > .wsmenu-list > li > .wsmegamenu.halfmenu {
-    width: 100%;
-    margin: 0px;
-    padding: 5px 0px 10px 0px;
-  }
-
-  .wsmenu > .wsmenu-list > li > .wsmegamenu .title {
-    color: #666666;
-    font-size: 15px;
-    padding: 10px 8px 10px 0px;
-  }
-
-  .wsmenu > .wsmenu-list > li > .wsmegamenu > ul {
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-    font-size: 15px;
-  }
-
-  .wsmenu > .wsmenu-list > li > .wsmegamenu > ul > li > a {
-    padding: 9px 14px;
-    line-height: normal;
-    font-size: 13px;
-    background-color: #e7e7e7;
-    color: #666666;
-  }
-
-  .wsmenu > .wsmenu-list > li > .wsmegamenu > ul > li > a:hover {
-    background-color: #000000;
-  }
-
-  .wsmenu > .wsmenu-list > li > .wsmegamenu ul li.title {
-    line-height: 26px;
-    color: #666666;
-    margin: 0px;
-    font-size: 15px;
-    padding: 7px 0px;
-    background-color: transparent;
-  }
-
-  .wsmenu > .wsmenu-list > li > .wsmegamenu.halfdiv {
-    width: 100%;
-  }
-
-  .wsmenu > .wsmenu-list > li > .wsmegamenu .menu_form {
-    padding: 5px 0px 62px 0px;
-  }
-
-  .wsmenu > .wsmenu-list > li > .wsmegamenu .show-grid div {
-    margin: 0px;
-  }
-
-  .wsmenu > .wsmenu-list > li > .wsmegamenu .menu_form input[type="button"] {
-    width: 46%;
-  }
-
-  .wsmenu > .wsmenu-list > li > .wsmegamenu .menu_form input[type="submit"] {
-    width: 46%;
-  }
-
-  .wsmenu > .wsmenu-list > li > .wsmegamenu .menu_form textarea {
-    min-height: 100px;
-  }
-
-  /* ================== Mobile Header CSS ================== */
-  .wsmobileheader {
-    width: 100%;
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10002;
-    height: 54px;
-    background-color: #eaecf0;
-    text-align: center;
-    -webkit-transition: all 0.25s ease-in-out;
-    -moz-transition: all 0.25s ease-in-out;
-    -o-transition: all 0.25s ease-in-out;
-    -ms-transition: all 0.25s ease-in-out;
-    transition: all 0.25s ease-in-out;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
-  }
-
-  .wsactive .wsmobileheader {
-    margin-left: 240px;
-    margin-left: 300px;
-    -webkit-transition: all 0.25s ease-in-out;
-    -moz-transition: all 0.25s ease-in-out;
-    -o-transition: all 0.25s ease-in-out;
-    -ms-transition: all 0.25s ease-in-out;
-    transition: all 0.25s ease-in-out;
-  }
-
-  .wsmobileheader .smllogo {
-    display: inline-block;
-    margin-top: 12px;
-  }
-
-  /* Mobile Search Bar*/
-  .wsmenu > .wsmenu-list > li.rightmenu > .topmenusearch {
-    width: 86%;
-    margin: 7% 7%;
-    padding: 0px;
-  }
-
-  .wsmenu > .wsmenu-list > li.rightmenu > .topmenusearch input {
-    border-radius: 50px;
-  }
-
-  .wsmenu > .wsmenu-list > li.rightmenu > .topmenusearch input:focus {
-    width: 100%;
-  }
-
-  .callusbtn {
-    color: #a9a9a9;
-    font-size: 18px;
-    position: absolute;
-    right: 5px;
-    top: 0px;
-    transition: all 0.4s ease-in-out 0s;
-    z-index: 102;
-    padding: 12px 14px;
-  }
-
-  .callusbtn i {
-    vertical-align: top;
-    margin-top: 4px;
-  }
-
-  .callusbtn:hover i {
-    color: #a9a9a9;
-  }
-
-  /* Mobile Toggle Menu icon (X ICON) */
-  .wsanimated-arrow {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 102;
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    -ms-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-  }
-
-  .wsanimated-arrow {
-    cursor: pointer;
-    padding: 16px 35px 16px 0px;
-    margin: 7px 0 0 15px;
-  }
-
-  .wsanimated-arrow span,
-  .wsanimated-arrow span:before,
-  .wsanimated-arrow span:after {
-    cursor: pointer;
-    height: 3px;
-    width: 22px;
-    background: #a9a9a9;
-    position: absolute;
-    display: block;
-    content: "";
-  }
-
-  .wsanimated-arrow span:before {
-    top: -7px;
-    width: 26px;
-  }
-
-  .wsanimated-arrow span:after {
-    bottom: -7px;
-    width: 20px;
-  }
-
-  .wsanimated-arrow span,
-  .wsanimated-arrow span:before,
-  .wsanimated-arrow span:after {
-    transition: all 500ms ease-in-out;
-  }
-
-  .wsactive .wsanimated-arrow span:after {
-    width: 23px;
-  }
-
-  .wsactive .wsanimated-arrow span {
-    background-color: transparent;
-  }
-
-  .wsactive .wsanimated-arrow span:before,
-  .wsactive .wsanimated-arrow.active span:after {
-    top: 7px;
-  }
-
-  .wsactive .wsanimated-arrow span:before {
-    transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    bottom: 0px;
-  }
-
-  .wsactive .wsanimated-arrow span:after {
-    transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-  }
-
-  /* ================== Mobile Overlay/Drawer CSS ================== */
-  .overlapblackbg {
-    right: 0;
-    width: calc(100% - 240px);
-    width: calc(100% - 300px);
-    height: 100vh;
-    min-height: 100%;
-    position: fixed;
-    top: 0;
-    opacity: 0;
-    visibility: hidden;
-    background-color: rgba(0, 0, 0, 0.45);
-    cursor: pointer;
-  }
-
-  .wsactive .wsmenu .overlapblackbg {
-    opacity: 1;
-    visibility: visible;
-    -webkit-transition: opacity 1.5s ease-in-out;
-    -moz-transition: opacity 1.5s ease-in-out;
-    -ms-transition: opacity 1.5s ease-in-out;
-    -o-transition: opacity 1.5s ease-in-out;
-  }
-
-  .wsmenucontainer {
-    -webkit-transition: all 0.25s ease-in-out;
-    -moz-transition: all 0.25s ease-in-out;
-    -o-transition: all 0.25s ease-in-out;
-    -ms-transition: all 0.25s ease-in-out;
-    transition: all 0.25s ease-in-out;
-  }
-
-  .wsactive .wsmenucontainer {
-    margin-left: 240px;
-    margin-left: 300px;
-    -webkit-transition: all 0.25s ease-in-out;
-    -moz-transition: all 0.25s ease-in-out;
-    -o-transition: all 0.25s ease-in-out;
-    -ms-transition: all 0.25s ease-in-out;
-    transition: all 0.25s ease-in-out;
-  }
-
-  .wsactive .wsmenu {
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    visibility: visible;
-    z-index: 1000;
-    top: 0;
-  }
-
-  .wsactive .wsmenu > .wsmenu-list {
-    -webkit-transition: all 0.25s ease-in-out;
-    -moz-transition: all 0.25s ease-in-out;
-    -o-transition: all 0.25s ease-in-out;
-    -ms-transition: all 0.25s ease-in-out;
-    transition: all 0.25s ease-in-out;
-    margin-left: 0;
-  }
-
-  /* ================== Mobile Sub Menu Expander Arrows  ================== */
-  .wsmenu > .wsmenu-list > li > .wsmenu-click {
-    height: 49px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: block;
-    cursor: pointer;
-    width: 100%;
-  }
-
-  .wsmenu > .wsmenu-list > li .wsmenu-click.ws-activearrow > i {
-    transform: rotate(-45deg);
-    margin-top: 23px;
-  }
-
-  .wsmenu > .wsmenu-list > li > .wsmenu-click > i {
-    display: block;
-    height: 8px;
-    width: 8px;
-    float: right;
-    transform: rotate(-225deg);
-    margin: 18px 18px 0px 0px;
-  }
-
-  .wsmenu > .wsmenu-list > li > .wsmenu-click > i:before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    border-width: 1.5px 1.5px 0 0;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.4);
-    transition: 0.2s ease;
-    display: block;
-    transform-origin: 100% 0;
-  }
-
-  .wsmenu > .wsmenu-list > li > ul.sub-menu > li .wsmenu-click02 {
-    height: 41px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: block;
-    cursor: pointer;
-    width: 100%;
-  }
-
-  .wsmenu > .wsmenu-list > li > ul.sub-menu > li .wsmenu-click02 > i {
-    display: block;
-    height: 8px;
-    width: 8px;
-    float: right;
-    transform: rotate(-225deg);
-    margin: 14px 18px 0px 0px;
-  }
-
-  .wsmenu > .wsmenu-list > li > ul.sub-menu > li .wsmenu-click02 > i:before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    border-width: 1.5px 1.5px 0 0;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.4);
-    transition: 0.2s ease;
-    display: block;
-    transform-origin: 100% 0;
-  }
-
-  .wsmenu
-    > .wsmenu-list
-    > li
-    > ul.sub-menu
-    > li
-    .wsmenu-click02
-    > i.wsmenu-rotate {
-    transform: rotate(-45deg);
-    margin-top: 19px;
-  }
-
-  /*End Media Query*/
-}
-
-/* Extra @Media Query*/
-@media only screen and (min-width: 992px) and (max-width: 1162px) {
-  .desktoplogo {
-    margin-left: 12px;
-  }
-  /*
-  .wsmenu > .wsmenu-list > li > a > .wsarrow {
-    display: none;
-  }
-*/
-  .wsmenu > .wsmenu-list > li > a {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  .wsmenu > .wsmenu-list > li a.menuhomeicon {
-    padding-left: 22px;
-    padding-right: 22px;
-  }
-}
-
-.btn-primary,
-.white-color .btn-primary {
-  color: #fff;
-  background-color: #2980b9;
-  border-color: #2980b9;
-  background-image: linear-gradient(
-    135deg,
-    rgb(249, 170, 96) 0%,
-    rgb(240, 90, 70) 100%
-  );
-  border: 0 !important;
-}
-
-.primary-hover:hover,
-.scroll .primary-hover:hover,
-.white-color .primary-hover:hover {
-  color: #fff !important;
-  background-color: #2980b9;
-  border-color: #297fb900 !important;
-  background-image: linear-gradient(
-    135deg,
-    rgb(249, 170, 96) 0%,
-    rgb(240, 90, 70) 100%
-  );
-  border: 0 !important;
-}
-
-.primary-color,
-.primary-color h2,
-.primary-color h3,
-.primary-color h4,
-.primary-color h5,
-.primary-color h6,
-.primary-color p,
-.primary-color a,
-.primary-color li,
-.primary-color i,
-.primary-color span,
-.grey-color .primary-color,
-.white-color .primary-color {
-  color: #3b2c81 !important;
-}
-.bluestone-color,
-.bluestone-color h2,
-.bluestone-color h3,
-.bluestone-color h4,
-.bluestone-color h5,
-.bluestone-color h6,
-.bluestone-color p,
-.bluestone-color a,
-.bluestone-color li,
-.bluestone-color i,
-.bluestone-color span,
-.grey-color .bluestone-color,
-.white-color .bluestone-color {
-  color: #3b2c81 !important;
-}
-
-.bg-primary {
-  background-image: linear-gradient(
-    135deg,
-    rgb(249, 170, 96) 0%,
-    rgb(240, 90, 70) 100%
-  ) !important;
-}
-.bg-blue {
-  background-color: #3b2c81 !important;
-}
-.tabs-1.primary-tabs li.displayed,
-.tabs-1.primary-tabs li.displayed:hover {
-  border-color: #3b2c81 !important;
-  color: #3b2c81 !important;
-}
-.sbox-1,
-.sbox-2 {
-  height: 346px !important;
-}
-
-.sbox-2.wow.fadeInUp {
-  border: 1px solid #dddddd54;
-}
-.sbox-2.wow.fadeInUp img {
-  width: auto !important;
-  height: auto !important;
-}
-.play-btn-primary .video-play-button:after {
-    background: #f2734d !important;
-}
-.btn-green, .scroll .btn-green, .white-color .btn-green {
-    color: #fff!important;
-    background-color: #20ab5c;
-    border-color: #20ab5c;
-    background-image: linear-gradient( 135deg, rgb(249, 170, 96) 0%, rgb(240, 90, 70) 100% );
-    border: 0 !important;
-}
-.project-data p.h5-md {
-    overflow: hidden;
-    line-height: 2rem;
-    max-height: 8rem;
-    -webkit-box-orient: vertical;
-    display: block;
-    display: -webkit-box;
-    overflow: hidden !important;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 4;
-}
-.project-3 .project-data {
-    padding: 35px 20px 20px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
-    height: 300px;
-}
+<!DOCTYPE html>
+<!-- Metreex - SEO & Digital Marketing Agency Landing Page Template design by Jthemes -->
+<!--[if lt IE 7]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="author" content="Media Force Agency" />
+	<meta name="description" content="Media Force Agency | SEO & Digital Marketing Agency" />
+	<meta name="keywords" content="SEO, Strategy, Digital Marketing Agency, Online Marketing" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- SITE TITLE -->
+	<title>Media Force Agency | SEO & Digital Marketing Agency</title>
+
+	<!-- FAVICON AND TOUCH ICONS  -->
+	<link rel="shortcut icon" href="images/favi.png" type="image/x-icon" />
+	<link rel="icon" href="images/favi.png" type="image/x-icon" />
+	<link rel="apple-touch-icon" sizes="152x152" href="images/apple-touch-icon-152x152.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="images/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="images/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+	<link rel="icon" href="images/apple-touch-icon.png" type="image/x-icon" />
+
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Muli:400,600,700,800,900&display=swap" rel="stylesheet" />
+
+	<!-- BOOTSTRAP CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+
+	<!-- FONT ICONS -->
+	<link href="https://use.fontawesome.com/releases/v5.11.0/css/all.css" rel="stylesheet" crossorigin="anonymous" />
+	<link href="css/flaticon.css" rel="stylesheet" />
+
+	<!-- PLUGINS STYLESHEET -->
+	<link href="css/menu.css" rel="stylesheet" />
+	<link id="effect" href="css/dropdown-effects/fade-down.css" media="all" rel="stylesheet" />
+	<link href="css/magnific-popup.css" rel="stylesheet" />
+	<link href="css/flexslider.css" rel="stylesheet" />
+	<link href="css/owl.carousel.min.css" rel="stylesheet" />
+	<link href="css/owl.theme.default.min.css" rel="stylesheet" />
+
+	<!-- ON SCROLL ANIMATION -->
+	<link href="css/animate.css" rel="stylesheet" />
+
+	<!-- TEMPLATE CSS -->
+	<!-- <link href="css/carrot.css" rel="stylesheet">     -->
+	<link href="css/dodgerblue.css" rel="stylesheet" />
+	<!-- <link href="css/green.css" rel="stylesheet">      -->
+	<!-- <link href="css/magneta.css" rel="stylesheet">    -->
+	<!-- <link href="css/olive.css" rel="stylesheet">      -->
+	<!-- <link href="css/orange.css" rel="stylesheet">     -->
+	<!-- <link href="css/purple.css" rel="stylesheet">     -->
+	<!-- <link href="css/red.css" rel="stylesheet">        -->
+	<!-- <link href="css/skyblue.css" rel="stylesheet">    -->
+	<!-- <link href="css/teal.css" rel="stylesheet">       -->
+
+	<!-- RESPONSIVE CSS -->
+	<link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body>
+	<div class="wsmenucontainer">
+		<div class="wsmenucontainer">
+			<div class="wsmenucontainer">
+				<!-- PRELOADER SPINNER
+		============================================= -->
+				<div id="loader-wrapper" style="display: none">
+					<div id="loading">
+						<div id="loading-center">
+							<div id="loading-center-absolute">
+								<div class="object" id="object_four"></div>
+								<div class="object" id="object_three"></div>
+								<div class="object" id="object_two"></div>
+								<div class="object" id="object_one"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- PAGE CONTENT
+		============================================= -->
+				<div id="page" class="page">
+					<!-- HEADER
+			============================================= -->
+					<header id="header" class="header tra-menu navbar-dark">
+						<div class="header-wrapper">
+							<!-- MOBILE HEADER -->
+							<div class="wsmobileheader clearfix" _msthidden="2">
+								<a id="wsnavtoggle" class="wsanimated-arrow"><span></span></a>
+								<span class="smllogo smllogo-black"><img src="images/logo.png" width="162" height="40"
+										alt="mobile-logo" _msthidden="A" _msthiddenattr="392392"
+										_mstalt="172640" /></span>
+								<span class="smllogo smllogo-white"><img src="images/logo-white.png" width="162"
+										height="40" alt="mobile-logo" _msthidden="A" _msthiddenattr="392393"
+										_mstalt="172640" /></span>
+								<a href="tel:123456789" class="callusbtn"><i class="fas fa-phone"></i></a>
+							</div>
+
+							<!-- NAVIGATION MENU -->
+							<div class="wsmainfull menu clearfix scroll">
+								<div class="wsmainwp clearfix">
+									<!-- LOGO IMAGE -->
+									<!-- For Retina Ready displays take a image with double the amount of pixels that your image will be displayed (e.g 334 x 80 pixels) -->
+									<div class="desktoplogo">
+										<a href="#hero-5" class="logo-black"><img src="images/logo.png" width="162"
+												height="40" alt="header-logo" _mstalt="171405" /></a>
+									</div>
+									<div class="desktoplogo" _msthidden="1">
+										<a href="#hero-5" class="logo-white" _msthidden="1"><img
+												src="images/logo-white.png" width="162" height="40" alt="header-logo"
+												_msthidden="A" _msthiddenattr="1017042" _mstalt="171405" /></a>
+									</div>
+
+									<!-- MAIN MENU -->
+									<nav class="wsmenu clearfix">
+										<div class="overlapblackbg"></div>
+										<div class="overlapblackbg"></div>
+										<div class="overlapblackbg"></div>
+										<ul class="wsmenu-list">
+											<!-- SIMPLE NAVIGATION LINK -->
+											<li class="nl-simple" aria-haspopup="true">
+												<a href="index.html" _msthash="1437280" _msttexthash="43979">Home</a>
+											</li>
+
+											<!-- SIMPLE NAVIGATION LINK -->
+											<li class="nl-simple" aria-haspopup="true">
+												<a href="about-us.html" _msthash="1437644" _msttexthash="93587">About
+													Us</a>
+											</li>
+											<!-- SIMPLE NAVIGATION LINK -->
+											<li class="nl-simple" aria-haspopup="true">
+												<a href="services.html" _msthash="1438008"
+													_msttexthash="115193">Services</a>
+											</li>
+
+											<!-- SIMPLE NAVIGATION LINK -->
+											<li class="nl-simple" aria-haspopup="true">
+												<a href="pricing.html" _msthash="1438372"
+													_msttexthash="93873">Pricing</a>
+											</li>
+
+											<!-- SIMPLE NAVIGATION LINK -->
+											<li class="nl-simple" aria-haspopup="true">
+												<a href="blog-listing.html" _msthash="1487850"
+													_msttexthash="43615">Blog</a>
+											</li>
+
+											<!-- SIMPLE NAVIGATION LINK -->
+											<li class="nl-simple" aria-haspopup="true">
+												<a href="contacts.html" _msthash="1488240"
+													_msttexthash="115440">Contacts</a>
+											</li>
+
+											<!-- HEADER PHONE NUMBER 
+																					    <li class="nl-simple primary-scroll" aria-haspopup="true">
+																					    	<a href="tel:123456789" class="last-link last-link-number">
+																					    		<i class="fas fa-phone-square-alt"></i> 855-569-7890
+																					    	</a>
+																					    </li>-->
+
+											<!-- HEADER BUTTON 
+																					    <li class="nl-simple" aria-haspopup="true">
+																					    	<a href="#cta-6" class="btn btn-tra-white primary-hover last-link">Free SEO Audit</a>
+																					    </li> -->
+										</ul>
+									</nav>
+									<!-- END MAIN MENU -->
+									<!-- END MAIN MENU -->
+								</div>
+							</div>
+							<!-- END NAVIGATION MENU -->
+						</div>
+						<!-- End header-wrapper -->
+					</header>
+					<!-- END HEADER -->
+
+					<!-- HERO-5
+			============================================= -->
+					<section id="hero-5" class="hero-section division">
+						<div class="container">
+							<div class="row d-flex align-items-center">
+								<!-- HERO IMAGE -->
+								<div class="col-md-5 col-xl-6">
+									<div class="hero-5-img text-center">
+										<img class="img-fluid" src="images/hero-5-img.png" alt="hero-image"
+											_mstalt="147719" />
+									</div>
+								</div>
+
+								<!-- HERO TEXT -->
+								<div class="col-md-7 col-xl-6">
+									<div class="hero-txt">
+										<!-- Small Title -->
+										<h4 class="bluestone-color" _msthash="921323" _msttexthash="621907">
+											Welcome to Media Force Agency
+										</h4>
+
+										<!-- Title -->
+										<h3 _msthash="921479" _msttexthash="1307228">
+											Get Hyper Targeted Traffic For Your Business
+										</h3>
+
+										<!-- Text -->
+										<p class="grey-color" _msthash="881114" _msttexthash="5795894">
+											News Article, Audio Ad, Video, Slideshare Presentation,
+											Blog Post, Infographic, Unlimited Revisions
+										</p>
+
+										<!-- Button -->
+										<a href="#cta-6" class="btn btn-md btn-primary bluestone-hover"
+											_msthash="879983" _msttexthash="305838">Get A Free Analysis</a>
+									</div>
+								</div>
+								<!-- END HERO TEXT -->
+							</div>
+							<!-- End row -->
+						</div>
+						<!-- End container -->
+					</section>
+					<!-- END HERO-5 -->
+
+					<!-- SERVICES-5
+			============================================= -->
+					<section id="services-5" class="bg-lightgrey wide-60 services-section division">
+						<div class="container">
+							<div class="row">
+								<!-- SERVICE BOX #1 -->
+								<div class="col-md-4">
+									<div class="sbox-5 icon-md wow fadeInUp" data-wow-delay="0.4s" style="
+                        visibility: visible;
+                        animation-delay: 0.4s;
+                        animation-name: fadeInUp;
+                      ">
+										<!-- Icon -->
+										<img class="img-65" src="images/icons/hierarchical-structure-1.png"
+											alt="feature-icon" _mstalt="197327" />
+
+										<!-- Text -->
+										<div class="sbox-5-txt">
+											<!-- Title -->
+											<h5 class="h5-lg" _msthash="1492023" _msttexthash="924573">
+												Experienced and knowledgeable team
+											</h5>
+
+											<!-- Text -->
+											<p class="grey-color" _msthash="1439113" _msttexthash="5738772">
+												Our team is experienced and knowledgeable, but we also
+												approach every project as if it were our first.&nbsp;
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<!-- SERVICE BOX #2 -->
+								<div class="col-md-4">
+									<div class="sbox-5 icon-md wow fadeInUp" data-wow-delay="0.6s" style="
+                        visibility: visible;
+                        animation-delay: 0.6s;
+                        animation-name: fadeInUp;
+                      ">
+										<!-- Icon -->
+										<img class="img-65" src="images/icons/trophy-1.png" alt="feature-icon"
+											_mstalt="197327" />
+
+										<!-- Text -->
+										<div class="sbox-5-txt">
+											<!-- Title -->
+											<h5 class="h5-lg" _msthash="1492751" _msttexthash="1087060">
+												Transparent and trustworthy services
+											</h5>
+
+											<!-- Text -->
+											<p class="grey-color" _msthash="1439815" _msttexthash="4276610">
+												Media Force Agency is committed to providing
+												transparent and trustworthy services.&nbsp;
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<!-- SERVICE BOX #3 -->
+								<div class="col-md-4">
+									<div class="sbox-5 icon-md wow fadeInUp" data-wow-delay="0.8s" style="
+                        visibility: visible;
+                        animation-delay: 0.8s;
+                        animation-name: fadeInUp;
+                      ">
+										<!-- Icon -->
+										<img class="img-65" src="images/icons/analytics-3.png" alt="feature-icon"
+											_mstalt="197327" />
+
+										<!-- Text -->
+										<div class="sbox-5-txt">
+											<!-- Title -->
+											<h5 class="h5-lg" _msthash="1493479" _msttexthash="965978">
+												Quality Traffic. Measurable Results
+											</h5>
+
+											<!-- Text -->
+											<p class="grey-color" _msthash="1440517" _msttexthash="4664569">
+												We specialize in helping you get the most out of your
+												website. We build it from the ground up.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- End row -->
+						</div>
+						<!-- End container -->
+					</section>
+					<!-- END SERVICES-5 -->
+
+					<!-- ABOUT-2
+			============================================= -->
+					<section id="about-2" class="wide-60 about-section division">
+						<div class="container">
+							<div class="row d-flex align-items-center">
+								<!-- ABOUT TEXT -->
+								<div class="col-md-7 col-lg-6">
+									<div class="txt-block pc-25 mb-40 wow fadeInLeft" data-wow-delay="0.4s" style="
+                        visibility: visible;
+                        animation-delay: 0.4s;
+                        animation-name: fadeInLeft;
+                      ">
+										<!-- Section SubTitle -->
+										<span class="section-subtitle bluestone-color" _msthash="1085136"
+											_msttexthash="453427">WELCOME TO MEDIA FORCE AGENCY</span>
+
+										<!-- Title -->
+										<h4 class="h4-xl" _msthash="977808" _msttexthash="1877850">
+											We're providing the best SEO services for your website
+										</h4>
+
+										<!-- List -->
+										<p class="p-sm" _msthash="2368132" _msttexthash="86674952">
+											We strive to offer local businesses an affordable
+											solution to be seen on the internet as an authority in
+											their niche and make it possible for them to compete
+											with big brands.
+										</p>
+
+										<p class="p-sm" _msthash="2368132" _msttexthash="86674952">
+											With unique content research, creation, and distribution
+											capability - in combination with the high authority of
+											the sites we publish our content to, we can get highly
+											targeted exposure for any brand, product, or service.
+										</p>
+										<p class="p-sm" _msthash="2368132" _msttexthash="86674952">
+											We have developed systems and established media
+											connections that allow us to predictably get media
+											attention and online visibility for your brand,
+											products, or services. The focus of our campaigns is to
+											bring highly targeted visitors that are looking for
+											services or products that you provide to your door.
+										</p>
+										<!-- SMALL STATISTIC -->
+										<div class="small-statistic">
+											<div class="row">
+												<!-- STATISTIC BLOCK #1 -->
+												<div class="col-sm-6">
+													<div class="statistic-block">
+														<h5 class="statistic-number primary-color" _msthash="2436746"
+															_msttexthash="30576">
+															4,<span class="count-element">379</span>
+														</h5>
+														<p _msthash="2368015" _msttexthash="318552">
+															Websites Improved
+														</p>
+														<p class="p-sm" _msthash="2368132" _msttexthash="5516810">
+															We’re proud to announce that as of today, 4,379
+															websites have been improved by our SEO agency
+														</p>
+													</div>
+												</div>
+
+												<!-- STATISTIC BLOCK #2 -->
+												<div class="col-sm-6">
+													<div class="statistic-block">
+														<h5 class="statistic-number primary-color">
+															<span class="count-element" _msthash="2437318"
+																_msttexthash="11115">99</span>%
+														</h5>
+														<p _msthash="2368561" _msttexthash="454480">
+															Customer Satisfaction
+														</p>
+														<p class="p-sm" _msthash="2368678" _msttexthash="5406336">
+															We're not satisfied until you are, and that's
+															why we offer our clients a 99% satisfaction
+															guarantee.
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- END SMALL STATISTIC -->
+									</div>
+								</div>
+								<!-- END ABOUT TEXT -->
+
+								<!-- ABOUT IMAGE -->
+								<div class="col-md-5 col-lg-6">
+									<div class="img-block mb-40 pl-25 wow fadeInRight" data-wow-delay="0.6s" style="
+                        visibility: visible;
+                        animation-delay: 0.6s;
+                        animation-name: fadeInRight;
+                      ">
+										<img class="img-fluid" src="images/image-02.png" alt="about-image"
+											_mstalt="171067" />
+									</div>
+								</div>
+							</div>
+							<!-- End row -->
+						</div>
+						<!-- End container -->
+					</section>
+					<!-- End ABOUT-2 -->
+
+					<!-- HORIZONTAL GREY LINE -->
+					<div class="section-divider">
+						<div class="container">
+							<div class="row">
+								<div class="grey-border"></div>
+							</div>
+						</div>
+					</div>
+
+					<!-- SERVICES-4
+			============================================= -->
+					<section id="services-4" class="wide-60 services-section division">
+						<div class="container">
+							<!-- SECTION TITLE -->
+							<div class="row">
+								<div class="col-lg-10 offset-lg-1 section-title wow fadeInUp" data-wow-delay="0.2s"
+									style="
+                      visibility: visible;
+                      animation-delay: 0.2s;
+                      animation-name: fadeInUp;
+                    ">
+									<!-- Title 	-->
+									<h3 class="h3-lg" _msthash="870792" _msttexthash="855621">
+										SEO Management &amp; Strategy Services
+									</h3>
+
+									<!-- Text -->
+									<p class="p-lg" _msthash="831454" _msttexthash="43065334">
+										We offer a wide range of services in search optimization,
+										content development and management, user experience
+										design, social media strategy and management, search
+										engine marketing (SEM), mobile apps development and
+										management, website design/development and host management
+										services.
+									</p>
+								</div>
+							</div>
+
+							<!-- SERVICE BOXES -->
+							<div class="services-boxes">
+								<div class="row">
+									<!-- SERVICE BOX #1 -->
+									<div class="col-md-6">
+										<div class="sbox-4 icon-md wow fadeInUp" data-wow-delay="0.4s" style="
+                          visibility: visible;
+                          animation-delay: 0.4s;
+                          animation-name: fadeInUp;
+                        ">
+											<!-- Icon -->
+											<img class="img-65" src="images/icons/analytics-2.png" alt="feature-icon"
+												_mstalt="197327" />
+
+											<!-- Text -->
+											<div class="sbox-4-txt">
+												<!-- Title -->
+												<h5 class="h5-lg" _msthash="1862653" _msttexthash="559624">
+													Advanced Analytics Review
+												</h5>
+
+												<!-- Text -->
+												<p class="grey-color" _msthash="1803061" _msttexthash="33314632">
+													Our Process Mapping methodology focuses on
+													conducting the proper analysis of the website’s
+													performance and identifying possible optimizations,
+													helping you get to the next level of your business
+													with less effort.
+												</p>
+											</div>
+										</div>
+									</div>
+
+									<!-- SERVICE BOX #2 -->
+									<div class="col-md-6">
+										<div class="sbox-4 icon-md wow fadeInUp" data-wow-delay="0.6s" style="
+                          visibility: visible;
+                          animation-delay: 0.6s;
+                          animation-name: fadeInUp;
+                        ">
+											<!-- Icon -->
+											<img class="img-65" src="images/icons/email-1.png" alt="feature-icon"
+												_mstalt="197327" />
+
+											<!-- Text -->
+											<div class="sbox-4-txt">
+												<!-- Title -->
+												<h5 class="h5-lg" _msthash="1863381" _msttexthash="553371">
+													Email Marketing Campaigns
+												</h5>
+
+												<!-- Text -->
+												<p class="grey-color" _msthash="1803763" _msttexthash="19775886">
+													We specialize in email marketing for small
+													businesses. We have work done for various
+													organizations and have 200+ happy customers. We
+													offer branding services, campaign creation and
+													copywriting.
+												</p>
+											</div>
+										</div>
+									</div>
+
+									<!-- SERVICE BOX #3 -->
+									<div class="col-md-6">
+										<div class="sbox-4 icon-md wow fadeInUp" data-wow-delay="0.8s" style="
+                          visibility: visible;
+                          animation-delay: 0.8s;
+                          animation-name: fadeInUp;
+                        ">
+											<!-- Icon -->
+											<img class="img-65" src="images/icons/video-player-1.png" alt="feature-icon"
+												_mstalt="197327" />
+
+											<!-- Text -->
+											<div class="sbox-4-txt">
+												<!-- Title -->
+												<h5 class="h5-lg" _msthash="1864109" _msttexthash="254631">
+													Video Marketing
+												</h5>
+
+												<!-- Text -->
+												<p class="grey-color" _msthash="1804465" _msttexthash="5638126">
+													We’ll use our decades of experience to create a
+													video for you that people will want to watch.
+												</p>
+											</div>
+										</div>
+									</div>
+
+									<!-- SERVICE BOX #4 -->
+									<div class="col-md-6">
+										<div class="sbox-4 icon-md wow fadeInUp" data-wow-delay="1s" style="
+                          visibility: visible;
+                          animation-delay: 1s;
+                          animation-name: fadeInUp;
+                        ">
+											<!-- Icon -->
+											<img class="img-65" src="images/icons/price-tag.png" alt="feature-icon"
+												_mstalt="197327" />
+
+											<!-- Text -->
+											<div class="sbox-4-txt">
+												<!-- Title -->
+												<h5 class="h5-lg" _msthash="1864837" _msttexthash="741780">
+													Search Engine Optimization (SEO)
+												</h5>
+
+												<!-- Text -->
+												<p class="grey-color" _msthash="1805167" _msttexthash="44072067">
+													Our SEO Agency will improve your website’s position
+													in search engine results and drive more traffic to
+													your business online. We have a proven track record
+													of success in helping small businesses grow their
+													online presence through effective search engine
+													marketing strategies.
+												</p>
+											</div>
+										</div>
+									</div>
+
+									<!-- SERVICE BOX #5 -->
+									<div class="col-md-6">
+										<div class="sbox-4 icon-md wow fadeInUp" data-wow-delay="1.2s" style="
+                          visibility: visible;
+                          animation-delay: 1.2s;
+                          animation-name: fadeInUp;
+                        ">
+											<!-- Icon -->
+											<img class="img-65" src="images/icons/pay-per-click-3.png"
+												alt="feature-icon" _mstalt="197327" />
+
+											<!-- Text -->
+											<div class="sbox-4-txt">
+												<!-- Title -->
+												<h5 class="h5-lg" _msthash="1914172" _msttexthash="249782">
+													Pay Per Click (PPC)
+												</h5>
+
+												<!-- Text -->
+												<p class="grey-color" _msthash="1853969" _msttexthash="15524951">
+													Our SEO Agency services are just what you need to
+													improve your website's visibility and relevancy in
+													search engines. We offer Pay Per Click advertising
+													and SMO services, too.
+												</p>
+											</div>
+										</div>
+									</div>
+
+									<!-- SERVICE BOX #6 -->
+									<div class="col-md-6">
+										<div class="sbox-4 icon-md wow fadeInUp" data-wow-delay="1.4s" style="
+                          visibility: visible;
+                          animation-delay: 1.4s;
+                          animation-name: fadeInUp;
+                        ">
+											<!-- Icon -->
+											<img class="img-65" src="images/icons/computer-1.png" alt="feature-icon"
+												_mstalt="197327" />
+
+											<!-- Text -->
+											<div class="sbox-4-txt">
+												<!-- Title -->
+												<h5 class="h5-lg" _msthash="1914926" _msttexthash="316160">
+													Content Marketing
+												</h5>
+
+												<!-- Text -->
+												<p class="grey-color" _msthash="1854697" _msttexthash="18044741">
+													Our content marketing services go far beyond simple
+													blog posts. We tackle topics your target audience is
+													actively searching for, creating a strategy that
+													serves your entire business.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- End row -->
+							</div>
+							<!-- END SERVICE BOXES -->
+						</div>
+						<!-- End container -->
+					</section>
+					<!-- END SERVICES-4 -->
+
+					<!-- CONTENT-4
+			============================================= -->
+					<section id="content-4" class="bg-primary pt-100 content-section division">
+						<div class="container white-color">
+							<div class="row d-flex align-items-center">
+								<!-- TEXT BLOCK -->
+								<div class="col-md-7 col-lg-6">
+									<div class="txt-block pc-25 wow fadeInLeft" data-wow-delay="0.4s" style="
+                        visibility: visible;
+                        animation-delay: 0.4s;
+                        animation-name: fadeInLeft;
+                      ">
+										<!-- Section SubTitle -->
+										<span class="section-subtitle" _msthash="1214980" _msttexthash="639496">We're
+											technical and creative</span>
+
+										<!-- Title -->
+										<h4 class="h4-xl" _msthash="1101776" _msttexthash="1450319">
+											Rely on our experienced and knowledgeable team
+										</h4>
+
+										<!-- Text -->
+										<p _msthash="1057017" _msttexthash="28950363">
+											With a reputation for ethical, ethical and effective
+											marketing strategies, our team is ready to start
+											developing your strategies for you. We offer exceptional
+											SEO services that directly target the keyword phrases
+											you want to rank for.
+										</p>
+
+										<h5 class="h5-lg" _msthash="1102270" _msttexthash="909441">
+											We're proud to help businesses grow
+										</h5>
+
+										<!-- Text -->
+										<div class="cbox-1">
+											<i class="fas fa-check"></i>
+											<div class="cbox-1-txt">
+												<p _msthash="1728805" _msttexthash="12571585">
+													We are proud to be at the cutting edge of search
+													engine optimization. Our SEO services can grow your
+													business faster and easier than you could ever
+													imagine.
+												</p>
+											</div>
+										</div>
+
+										<!-- Text -->
+										<div class="cbox-1">
+											<i class="fas fa-check"></i>
+											<div class="cbox-1-txt">
+												<p _msthash="1779687" _msttexthash="8075119">
+													We've helped more than 100,000 small businesses like
+													yours grow their traffic, increase sales and attract
+													new customers.&nbsp;
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- END TEXT BLOCK -->
+
+								<!-- IMAGE BLOCK -->
+								<div class="col-md-5 col-lg-6">
+									<div class="content-4-img wow fadeInRight" data-wow-delay="0.6s" style="
+                        visibility: visible;
+                        animation-delay: 0.6s;
+                        animation-name: fadeInRight;
+                      ">
+										<img class="img-fluid" src="images/image-11.png" alt="content-image"
+											_mstalt="221533" />
+									</div>
+								</div>
+							</div>
+							<!-- End row -->
+						</div>
+						<!-- End container -->
+					</section>
+					<!-- END CONTENT-4 -->
+
+					<!-- TABS-1
+			============================================= -->
+					<section id="tabs-1" class="wide-60 tabs-section division">
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-10 offset-lg-1 section-title wow fadeInUp animated animated animated"
+									data-wow-delay="0.2s" style="
+                      visibility: visible;
+                      animation-delay: 0.2s;
+                      animation-name: undefined;
+                    ">
+									<!-- Title 	-->
+									<h3 class="h3-lg">HOW WE DRIVE RESULTS</h3>
+									<p class="p-lg">
+										The secret sauce that over 12,321+ customers trust.<br />
+									</p>
+
+									<h4 class="h4-lg" style="margin-top: 20px">
+										HOW WE DRIVE RESULTS
+										<p class="p-lg">
+											Content builds trust and connection with your audience.
+											If you’re not building content you’re leaving money on
+											the table.<br />
+										</p>
+									</h4>
+									<!-- Text -->
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-12 text-center">
+									<div class="tabs-nav clearfix">
+										<ul class="tabs-1 primary-tabs">
+											<!-- TAB-1 LINK -->
+											<li class="tab-link displayed" data-tab="tab-1">
+												Focus On Hyper-Targeted Traffic
+											</li>
+
+											<!-- TAB-2 LINK -->
+											<li class="tab-link" data-tab="tab-2">
+												Multimedia Formats Delivery
+											</li>
+
+											<!-- TAB-3 LINK -->
+											<li class="tab-link" data-tab="tab-3">Get Published</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- END TABS NAVIGATION -->
+
+							<!-- TABS CONTENT -->
+							<div class="tabs-content">
+								<!-- TAB-1 CONTENT -->
+								<div id="tab-1" class="tab-content displayed">
+									<div class="row d-flex align-items-center">
+										<!-- IMAGE BLOCK -->
+										<div class="col-md-5 col-lg-6">
+											<div class="img-block pr-25 mb-40">
+												<img class="img-fluid" src="images/image-05.png" alt="content-image" />
+											</div>
+										</div>
+
+										<!-- TEXT BLOCK -->
+										<div class="col-md-7 col-lg-6">
+											<div class="txt-block pc-25 mb-40">
+												<!-- Title -->
+												<h4 class="h4-xl">Focus On Hyper-Targeted Traffic</h4>
+
+												<!-- Text -->
+												<p _msthash="579111" _msttexthash="16552913" _mstvisible="4"
+													_msthidden="1">
+													Our campaigns allow your business to focus on a
+													specific product, service, city or place to bring
+													you the most targeted traffic.
+												</p>
+
+												<!-- Button -->
+												<a href="services.html" class="btn btn-tra-grey primary-hover">Learn
+													More</a>
+											</div>
+										</div>
+										<!-- END TEXT BLOCK -->
+									</div>
+									<!-- End row -->
+								</div>
+								<!-- END TAB-1 CONTENT -->
+
+								<!-- TAB-2 CONTENT -->
+								<div id="tab-2" class="tab-content">
+									<div class="row d-flex align-items-center">
+										<!-- IMAGE BLOCK -->
+										<div class="col-md-5 col-lg-6">
+											<div class="img-block pr-25 mb-40">
+												<img class="img-fluid" src="images/image-03.png" alt="content-image" />
+											</div>
+										</div>
+
+										<!-- TEXT BLOCK -->
+										<div class="col-md-7 col-lg-6">
+											<div class="txt-block pc-25 mb-40">
+												<!-- Title -->
+												<h4 class="h4-xl">Multimedia Formats Delivery</h4>
+
+												<!-- Text -->
+												<p>
+													<span style="font-size: 16.8px">We are 5x more powerful than any
+														online Press
+														Release. Our campaigns include each of the
+														following: article, blog, video, presentation,
+														audio ad and infographic.</span><br />
+												</p>
+
+												<!-- List -->
+
+												<!-- Button -->
+												<a href="services.html"
+													class="btn btn-md btn-primary tra-black-hover">Learn More</a>
+											</div>
+										</div>
+										<!-- END TEXT BLOCK -->
+									</div>
+									<!-- End row -->
+								</div>
+								<!-- END TAB-2 CONTENT -->
+
+								<!-- TAB-3 CONTENT -->
+								<div id="tab-3" class="tab-content">
+									<div class="row d-flex align-items-center">
+										<!-- IMAGE BLOCK -->
+										<div class="col-md-5 col-lg-6">
+											<div class="img-block pr-25 mb-40">
+												<img class="img-fluid" src="images/image-04.png" alt="content-image" />
+											</div>
+										</div>
+
+										<!-- TEXT BLOCK -->
+										<div class="col-md-7 col-lg-6">
+											<div class="txt-block pc-25 mb-40">
+												<!-- Title -->
+												<h4 class="h4-xl">Get Published</h4>
+
+												<!-- Text -->
+												<div class="cbox-1">
+													<div class="cbox-1-txt">
+														<p>
+															Your customers are researching you, but will
+															they find anything? We tell the world about you
+															in 6 formats across hundreds of websites they
+															already trust.
+														</p>
+														<a href="services.html"
+															class="btn btn-tra-grey primary-hover">Learn More</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- END TEXT BLOCK -->
+									</div>
+									<!-- End row -->
+								</div>
+								<!-- END TAB-3 CONTENT -->
+							</div>
+							<!-- END TABS CONTENT -->
+						</div>
+						<!-- End container -->
+					</section>
+					<!-- END TABS-1 -->
+
+					<!-- SERVICES-2
+			============================================= -->
+					<section id="services-2" class="bg-lightgrey wide-30 services-section division">
+						<div class="container">
+							<!-- SECTION TITLE -->
+							<div class="row">
+								<div class="col-lg-10 offset-lg-1 section-title wow fadeInUp" data-wow-delay="0.2s"
+									style="
+                      visibility: visible;
+                      animation-delay: 0.2s;
+                      animation-name: fadeInUp;
+                    ">
+									<!-- Title 	-->
+									<h3 class="h3-lg">Custom SEO Services – Our Specialty</h3>
+
+									<!-- Text -->
+									<p class="p-lg">
+										We offer custom SEO services that focus on your needs and
+										goals. Focus on where you want your site to rank, not on
+										what you have to do it!<br />
+									</p>
+								</div>
+							</div>
+							<!-- END SECTION TITLE -->
+
+							<!-- SERVICE BOXES -->
+							<div class="row">
+								<!-- SERVICE BOX #1 -->
+								<div class="col-sm-6 col-lg-4">
+									<a href="contacts.html">
+										<div class="sbox-2 wow fadeInUp animated" data-wow-delay="0.4s" style="
+                          visibility: visible;
+                          animation-delay: 0.4s;
+                          animation-name: undefined;
+                        ">
+											<!-- Icon  -->
+											<img class="img-85"
+												src="https://file-hosting.dashnexpages.net/ercframe/.editor/1667866643-2799.png"
+												alt="feature-icon" />
+
+											<!-- Title -->
+											<h5 class="h5-md">News Article</h5>
+
+											<!-- Text -->
+											<p class="p-sm grey-color">
+												Gets published on sites like these: Google News
+												Approved Sites, FOX affiliate sites, NBC affiliate
+												sites, Digital Journal, AZ Central, and exclusive news
+												sites
+											</p>
+										</div>
+									</a>
+								</div>
+
+								<!-- SERVICE BOX #2 -->
+								<div class="col-sm-6 col-lg-4">
+									<a href="contacts.html">
+										<div class="sbox-2 wow fadeInUp animated" data-wow-delay="0.6s" style="
+                          visibility: visible;
+                          animation-delay: 0.6s;
+                          animation-name: undefined;
+                        ">
+											<!-- Icon  -->
+											<img class="img-85"
+												src="https://file-hosting.dashnexpages.net/ercframe/.editor/1667867124-719.png"
+												alt="feature-icon" />
+
+											<!-- Title -->
+											<h5 class="h5-md">Blog Post</h5>
+
+											<!-- Text -->
+											<p class="p-sm grey-color">
+												Gets Published on sites like these: DailyMoss, Webs,
+												Weebly, Myspace and many more
+											</p>
+										</div>
+									</a>
+								</div>
+
+								<!-- SERVICE BOX #3 -->
+								<div class="col-sm-6 col-lg-4">
+									<a href="contacts.html">
+										<div class="sbox-2 wow fadeInUp animated" data-wow-delay="0.8s" style="
+                          visibility: visible;
+                          animation-delay: 0.8s;
+                          animation-name: undefined;
+                        ">
+											<!-- Icon  -->
+											<img class="img-85"
+												src="https://file-hosting.dashnexpages.net/ercframe/.editor/1667867159-3709.png"
+												alt="feature-icon" />
+
+											<!-- Title -->
+											<h5 class="h5-md">Slideshow</h5>
+
+											<!-- Text -->
+											<p class="p-sm grey-color">
+												Gets Published on sites like these: Slideshare, Box.
+												Dropbox, Anyflip, and many more
+											</p>
+										</div>
+									</a>
+								</div>
+
+								<!-- SERVICE BOX #4 -->
+							</div>
+							<div class="row">
+								<!-- SERVICE BOX #1 -->
+
+								<!-- SERVICE BOX #2 -->
+
+								<!-- SERVICE BOX #3 -->
+
+								<!-- SERVICE BOX #4 -->
+								<div class="col-sm-6 col-lg-4">
+									<a href="contacts.html">
+										<div class="sbox-2 wow fadeInUp animated animated animated" data-wow-delay="1s"
+											style="
+                          visibility: visible;
+                          animation-delay: 1s;
+                          animation-name: undefined;
+                        ">
+											<!-- Icon  -->
+											<img class="img-85" src="images/icons/infographics.png"
+												alt="feature-icon" />
+
+											<!-- Title -->
+											<h5 class="h5-md">Infographics</h5>
+
+											<!-- Text -->
+											<p class="p-sm grey-color">
+												Gets Published on sites like these: Pinterest,
+												Imageshack, ScoopIey and many more
+											</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-sm-6 col-lg-4">
+									<a href="contacts.html">
+										<div class="sbox-2 wow fadeInUp animated animated animated animated"
+											data-wow-delay="1s" style="
+                          visibility: visible;
+                          animation-delay: 1s;
+                          animation-name: undefined;
+                        ">
+											<!-- Icon  -->
+											<img class="img-85"
+												src="https://file-hosting.dashnexpages.net/ercframe/.editor/1667867172-1036.png"
+												alt="feature-icon" />
+
+											<!-- Title -->
+											<h5 class="h5-md">Podcast</h5>
+
+											<!-- Text -->
+											<p class="p-sm grey-color">
+												Gets Published on sites like these: Google Podcast,
+												Podbean and many more
+											</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-sm-6 col-lg-4">
+									<a href="contacts.html">
+										<div class="sbox-2 wow fadeInUp animated animated animated animated animated"
+											data-wow-delay="1s" style="
+                          visibility: visible;
+                          animation-delay: 1s;
+                          animation-name: undefined;
+                        ">
+											<!-- Icon  -->
+											<img class="img-85"
+												src="https://file-hosting.dashnexpages.net/ercframe/.editor/1667867184-8063.png"
+												alt="feature-icon" />
+
+											<!-- Title -->
+											<h5 class="h5-md">Video</h5>
+
+											<!-- Text -->
+											<p class="p-sm grey-color">
+												Gets Published on sites like these: YouTube, Vimeo,
+												DailyMotion and many more
+											</p>
+										</div>
+									</a>
+								</div>
+							</div>
+
+							<!-- END SERVICE BOXES -->
+
+							<div class="row">
+								<div class="col-lg-10 offset-lg-1 section-title wow fadeInUp animated animated animated"
+									data-wow-delay="0.2s" style="
+                      visibility: visible;
+                      animation-delay: 0.2s;
+                      animation-name: undefined;
+                    ">
+									<!-- Title 	-->
+
+									<!-- Text -->
+									<p class="p-lg">
+										We’ve boiled down an extremely complicated process into
+										three easy steps. These steps offer an opportunity for any
+										business to get seen online in a matter of days.
+									</p>
+									<p class="p-lg">
+										Get featured on Google News, NBC, CBS, YouTube, Slideshare
+										and hundreds of more sites.
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- End container -->
+					</section>
+					<!-- END SERVICES-2 -->
+
+					<!-- PROJECTS-3
+			============================================= -->
+					<section id="projects-3" class="wide-70 projects-section division">
+						<div class="container">
+							<!-- SECTION TITLE -->
+							<div class="row">
+								<div class="col-lg-10 offset-lg-1 section-title">
+									<!-- Title 	-->
+									<h3 class="h3-lg">CONTENT MARKETING ON AUTOPILOT</h3>
+
+									<!-- Text -->
+									<p class="p-lg">
+										Content on the internet is here to stay. We can help
+										youbuild content people trust. (Without taking hours and
+										hours of your precious time)
+									</p>
+								</div>
+							</div>
+
+							<!-- PROJECTS IMAGES HOLDER -->
+							<div class="row">
+								<!-- IMAGE #1 -->
+								<div class="col-md-6 col-lg-3">
+									<div class="project-3 wow fadeInUp animated" data-wow-delay="0.4s" style="
+                        visibility: visible;
+                        animation-delay: 0.4s;
+                        animation-name: undefined;
+                      ">
+										<a href=" ">
+											<!-- Project Data -->
+											<div class="project-preview">
+												<img class="img-fluid"
+													src="https://file-hosting.dashnexpages.net/ercframe/.editor/1667907845-4904.png"
+													alt="project-preview" />
+											</div>
+											<div class="project-data">
+												<h5 class="h5-md">Hyper-targeted buyer traffic</h5>
+
+												<p class="h5-md">
+													Our 100+ content team doesn’t produce fluff pieces.
+													We write highly optimized articles, blogs, videos,
+													slideshare presentations, infographics and audio ads
+													that are designed to get in front of your ideal
+													buyer.
+												</p>
+											</div>
+
+											<!-- Project Preview -->
+										</a>
+									</div>
+								</div>
+
+								<div class="col-md-6 col-lg-3">
+									<div class="project-3 wow fadeInUp animated" data-wow-delay="0.4s" style="
+                        visibility: visible;
+                        animation-delay: 0.4s;
+                        animation-name: undefined;
+                      ">
+										<a href=" ">
+											<!-- Project Data -->
+											<div class="project-preview">
+												<img class="img-fluid"
+													src="https://file-hosting.dashnexpages.net/ercframe/.editor/1667907891-7939.png"
+													alt="project-preview" />
+											</div>
+											<div class="project-data">
+												<h5 class="h5-md">Exposure to 281+ million people</h5>
+
+												<p class="h5-md">
+													Our unique distribution provides exposure in Google
+													News. This means Google will tailor your campaigns
+													to people who are already interested in your product
+													or service.
+												</p>
+											</div>
+
+											<!-- Project Preview -->
+										</a>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-3">
+									<div class="project-3 wow fadeInUp animated" data-wow-delay="0.4s" style="
+                        visibility: visible;
+                        animation-delay: 0.4s;
+                        animation-name: undefined;
+                      ">
+										<a href=" ">
+											<!-- Project Data -->
+											<div class="project-preview">
+												<img class="img-fluid"
+													src="https://file-hosting.dashnexpages.net/ercframe/.editor/1667907905-3052.png"
+													alt="project-preview" />
+											</div>
+											<div class="project-data">
+												<h5 class="h5-md">
+													5x more powerful than online press releases &amp;
+													news sites
+												</h5>
+
+												<p class="h5-md">
+													We’re the only company on the planet that amplifies
+													your message to generate exposure across 6 mediums.
+													We help you get seen, build trust and drive buyer
+													traffic from platforms like Apple Podcast, LinkedIn
+													Slideshare, YouTube and hundreds more.Published on
+													sites like: Apple Podcast
+												</p>
+											</div>
+
+											<!-- Project Preview -->
+										</a>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-3">
+									<div class="project-3 wow fadeInUp animated" data-wow-delay="0.4s" style="
+                        visibility: visible;
+                        animation-delay: 0.4s;
+                        animation-name: undefined;
+                      ">
+										<a href=" ">
+											<!-- Project Data -->
+											<div class="project-preview">
+												<img class="img-fluid"
+													src="https://file-hosting.dashnexpages.net/ercframe/.editor/1667907916-9142.png"
+													alt="project-preview" />
+											</div>
+											<div class="project-data">
+												<h5 class="h5-md">
+													Boost sales with ultra-specific content
+												</h5>
+
+												<p class="h5-md">
+													Enhancing your exposure, publishing laser focused
+													hyper-targeted traffic and being consistent with
+													your content marketing is what delivers the right
+													customers to your website.
+												</p>
+											</div>
+
+											<!-- Project Preview -->
+										</a>
+									</div>
+								</div>
+								<!-- END IMAGE #4 -->
+							</div>
+							<!-- END PROJECTS IMAGES HOLDER -->
+
+							<!-- ALL PROJECTS BUTTON -->
+							<div class="row">
+								<div class="col-md-12 text-center all-projects-btn">
+									<a href="services.html" class="btn btn-md btn-primary tra-black-hover">See Our
+										Services</a>
+								</div>
+							</div>
+						</div>
+						<!-- End container -->
+					</section>
+
+					<!-- END PROJECTS-3 -->
+
+					<!-- STATISTIC-1
+			============================================= -->
+					<div id="statistic-1" class="bg-blue bg-map statistic-section division">
+						<div class="container white-color">
+							<div class="row">
+								<!-- STATISTIC BLOCK #1 -->
+								<div class="col-sm-6 col-md-3">
+									<div class="statistic-block wow fadeInUp" data-wow-delay="0.4s" style="
+                        visibility: visible;
+                        animation-delay: 0.4s;
+                        animation-name: fadeInUp;
+                      ">
+										<!-- Text -->
+										<h5 class="statistic-number" _msthash="1225887" _msttexthash="30160">
+											3,<span class="count-element">485</span>
+										</h5>
+										<p class="p-md" _msthash="1178099" _msttexthash="259272">
+											Links Optimized
+										</p>
+									</div>
+								</div>
+
+								<!-- STATISTIC BLOCK #2 -->
+								<div class="col-sm-6 col-md-3">
+									<div class="statistic-block wow fadeInUp" data-wow-delay="0.6s" style="
+                        visibility: visible;
+                        animation-delay: 0.6s;
+                        animation-name: fadeInUp;
+                      ">
+										<!-- Text -->
+										<h5 class="statistic-number" _msthash="1226459" _msttexthash="29172">
+											1,<span class="count-element">281</span>
+										</h5>
+										<p class="p-md" _msthash="1178645" _msttexthash="264251">
+											Happy Customers
+										</p>
+									</div>
+								</div>
+
+								<!-- STATISTIC BLOCK #3 -->
+								<div class="col-sm-6 col-md-3">
+									<div class="statistic-block wow fadeInUp" data-wow-delay="0.8s" style="
+                        visibility: visible;
+                        animation-delay: 0.8s;
+                        animation-name: fadeInUp;
+                      ">
+										<!-- Text -->
+										<h5 class="statistic-number" _msthash="1227031" _msttexthash="30576">
+											4,<span class="count-element">379</span>
+										</h5>
+										<p class="p-md" _msthash="1179191" _msttexthash="318552">
+											Websites Improved
+										</p>
+									</div>
+								</div>
+
+								<!-- STATISTIC BLOCK #4 -->
+								<div class="col-sm-6 col-md-3">
+									<div class="statistic-block wow fadeInUp" data-wow-delay="1s" style="
+                        visibility: visible;
+                        animation-delay: 1s;
+                        animation-name: fadeInUp;
+                      ">
+										<!-- Text -->
+										<h5 class="statistic-number" _msthash="1227603" _msttexthash="29653">
+											2,<span class="count-element">473</span>
+										</h5>
+										<p class="p-md" _msthash="1179737" _msttexthash="257608">
+											Active Accounts
+										</p>
+									</div>
+								</div>
+							</div>
+							<!-- End row -->
+						</div>
+						<!-- End container -->
+					</div>
+					<!-- END STATISTIC-1 -->
+
+					<!-- PRICING-2
+			============================================= -->
+					<section id="pricing-2" class="wide-60 pricing-section division">
+						<div class="container">
+							<!-- SECTION TITLE -->
+							<div class="row">
+								<div class="col-lg-10 offset-lg-1 section-title wow fadeInUp" data-wow-delay="0.2s"
+									style="
+                      visibility: visible;
+                      animation-delay: 0.2s;
+                      animation-name: fadeInUp;
+                    ">
+									<!-- Title 	-->
+									<h3 class="h3-lg" _msthash="811343" _msttexthash="707239">
+										Simple Pricing, Instant Sign Up
+									</h3>
+
+									<!-- Text -->
+									<p class="p-lg" _msthash="773591" _msttexthash="5904613">
+										A top-rated and well-respected SEO agency with the
+										experience and expertise to help you rank in Google.
+									</p>
+								</div>
+							</div>
+
+							<div class="row pricing-row">
+								<!-- PRICE PLAN BASIC -->
+								<div class="col-md-6">
+									<div class="pricing-table wow fadeInLeft" data-wow-delay="0.4s" style="
+                        visibility: visible;
+                        animation-delay: 0.4s;
+                        animation-name: fadeInLeft;
+                      ">
+										<!-- Plan Price  -->
+										<div class="pricing-plan text-center">
+											<h4 class="h4-xs" _msthash="1413113" _msttexthash="351819">
+												GROWTH PACKAGES
+											</h4>
+										</div>
+
+										<!-- Pricing Plan Features  -->
+										<ul class="features">
+											<li _msthash="1360970" _msttexthash="6312410">
+												<span>Growth Package</span>1 Campaign per month =&gt;
+												3 Campaigns Package $3985 Billed Quarterly ($597 per
+												campaign)
+											</li>
+
+											<li _msthash="1361100" _msttexthash="7725302">
+												<span>Growth Plan</span>1 Campaign per month =&gt; 3
+												Campaigns Package $3985 Billed Quarterly ($597 per
+												campaign)
+											</li>
+
+											<li _msthash="1361230" _msttexthash="6441994">
+												<span>Quick Growth Plan</span>2 Campaigns per month
+												=&gt; 6 Campaigns Package $2982 Billed Quarterly ($497
+												per campaign)
+											</li>
+
+											<li _msthash="1361360" _msttexthash="16911154">
+												<span _istranslated="1">Accelerate Growth Plan</span>4
+												Campaigns per month =&gt; 12 Campaigns Package $4764
+												Billed Quarterly ($397 per campaign)
+											</li>
+										</ul>
+
+										<!-- Pricing Table Button -->
+										<div class="text-center">
+											<a href="#" class="btn btn-tra-grey black-hover" _msthash="1361101"
+												_msttexthash="153920">Get Started</a>
+										</div>
+									</div>
+								</div>
+								<!-- END PRICE PLAN BASIC -->
+
+								<!-- PRICE PLAN PRO -->
+								<div class="col-md-6">
+									<div class="pricing-table wow fadeInRight" data-wow-delay="0.4s" style="
+                        visibility: visible;
+                        animation-delay: 0.4s;
+                        animation-name: fadeInRight;
+                      ">
+										<!-- Plan Price  -->
+										<div class="pricing-plan text-center">
+											<h4 class="h4-xs" _msthash="1414205" _msttexthash="293176">
+												PREMIUM DISTRIBUTION PACKAGES
+											</h4>
+										</div>
+
+										<!-- Pricing Plan Features  -->
+										<ul class="features">
+											<li _msthash="1362023" _msttexthash="6312410">
+												<span>Reputation &amp; Exposure</span>1 Campaign -
+												Billed Once Single Payment of $2497
+											</li>
+
+											<li _msthash="1362153" _msttexthash="7725302">
+												<span>Reputation &amp; Exposure Boost Plan</span>1
+												Campaign per month =&gt; 3 Campaigns Package $5091
+												Billed Quarterly ($1697 per campaign)
+											</li>
+
+											<li _msthash="1362283" _msttexthash="6441994">
+												<span>Reputation &amp; Exposure Quick Boost Plan</span>2 Campaigns per
+												month =&gt; 6 Campaigns Package $8982
+												Billed Quarterly ($1497 per campaign)
+											</li>
+
+											<li _msthash="1362413" _msttexthash="16911154">
+												<span _istranslated="1">Pay To Play Big Plan</span>4
+												Campaigns per month =&gt; 12 Campaigns Package $15564
+												Billed Quarterly ($1297 per campaign)
+											</li>
+										</ul>
+
+										<!-- Pricing Table Button -->
+										<div class="text-center">
+											<a href="#" class="btn btn-tra-grey black-hover" _msthash="1361101"
+												_msttexthash="153920">Get Started</a>
+										</div>
+									</div>
+								</div>
+								<!-- END PRICE PLAN PRO -->
+							</div>
+
+							<!-- PRICING NOTICE TEXT -->
+							<div class="row">
+								<div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
+									<div class="pricing-notice text-center mb-40">
+										<p class="grey-color" _msthash="1048060" _msttexthash="4347109">
+											No commitment required – you can cancel anytime.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End container -->
+					</section>
+					<!-- END PRICING-2 -->
+
+					<!-- TESTIMONIALS-3
+			============================================= -->
+
+					<!-- END TESTIMONIALS-3 -->
+
+					<!-- VIDEO-2
+			============================================= -->
+					<div id="video-2" class="bg-scroll video-section division">
+						<div class="container white-color">
+							<div class="row">
+								<!-- VIDEO LINK -->
+								<div class="col-md-8 offset-md-2">
+									<div class="video-link text-center">
+										<!-- Change the link HERE!!! -->
+										<div class="play-btn-primary text-center">
+											<a class="video-popup2 video-play-button"
+												href="https://www.youtube.com/watch?v=7e90gBu4pas">
+												<span></span>
+											</a>
+										</div>
+									</div>
+								</div>
+								<!-- END VIDEO LINK -->
+							</div>
+							<!-- End row -->
+						</div>
+						<!-- End container -->
+					</div>
+					<!-- END VIDEO-2 -->
+
+					<!-- FAQs-1
+			============================================= -->
+					<section id="faqs-1" class="wide-100 faqs-section division">
+						<div class="container">
+							<!-- SECTION TITLE -->
+							<div class="row">
+								<div class="col-lg-10 offset-lg-1 section-title wow fadeInUp" data-wow-delay="0.2s"
+									style="
+                      visibility: visible;
+                      animation-delay: 0.2s;
+                      animation-name: fadeInUp;
+                    ">
+									<!-- Title -->
+									<h3 class="h3-lg" _msthash="661960" _msttexthash="614237">
+										Frequently Asked Questions
+									</h3>
+
+									<!-- Text -->
+									<p class="p-lg" _msthash="628394" _msttexthash="13175344">
+										Aliquam a augue suscipit, luctus neque purus ipsum neque
+										dolor primis libero Tempus, blandit posuere and ligula
+										varius magna a porta elementum massa risus
+									</p>
+								</div>
+							</div>
+							<!-- END SECTION TITLE -->
+
+							<!-- QUESTIONS HOLDER -->
+							<div class="row">
+								<div class="col-lg-10 offset-lg-1">
+									<div id="accordion" role="tablist">
+										<!-- QUESTION #1 -->
+										<div class="card wow fadeInUp" data-wow-delay="0.4s"
+											style="visibility: visible; animation-delay: 0.4s">
+											<!-- Question -->
+											<div class="card-header" role="tab" id="headingOne">
+												<h5 class="h5-sm">
+													<a data-toggle="collapse" href="#collapseOne" role="button"
+														aria-expanded="true" aria-controls="collapseOne"
+														_msthash="256581" _msttexthash="522301" class="">How do
+														campaigns actually work?</a>
+												</h5>
+											</div>
+
+											<!-- Answer -->
+											<div id="collapseOne" class="collapse show" role="tabpanel"
+												aria-labelledby="headingOne" data-parent="#accordion" style="">
+												<div class="card-body">
+													<!-- Text -->
+													<p _msthash="446524" _msttexthash="74498021">
+														We create consistent ultra-specific content about
+														your business that is distributed to hundreds of
+														websites and platforms in 6 different media
+														formats: news articles, blog posts, audio ads,
+														slideshare presentations, videos and infographics.
+														This content attracts hyper-targeted traffic to
+														your business by building authority and online
+														exposure.
+													</p>
+												</div>
+											</div>
+										</div>
+										<!-- END QUESTION #1 -->
+
+										<!-- QUESTION #2 -->
+										<div class="card wow fadeInUp" data-wow-delay="0.6s"
+											style="visibility: visible; animation-delay: 0.6s">
+											<!-- Question -->
+											<div class="card-header" role="tab" id="headingTwo">
+												<h5 class="h5-sm">
+													<a class="collapsed" data-toggle="collapse" href="#collapseTwo"
+														role="button" aria-expanded="false" aria-controls="collapseTwo"
+														_msthash="262886" _msttexthash="1584167">Does it work?</a>
+												</h5>
+											</div>
+
+											<!-- Answer -->
+											<div id="collapseTwo" class="collapse" role="tabpanel"
+												aria-labelledby="headingTwo" data-parent="#accordion" _msthidden="1"
+												style="">
+												<div class="card-body" _msthidden="1">
+													<p _msthash="454584" _msttexthash="54368639" _msthidden="1">
+														Absolutely - we wouldn’t be an 8 figure company
+														with 12,321+ customers if it didn’t!
+													</p>
+												</div>
+											</div>
+										</div>
+										<!-- END QUESTION #2 -->
+
+										<!-- QUESTION #3 -->
+										<div class="card wow fadeInUp" data-wow-delay="0.8s"
+											style="visibility: visible; animation-delay: 0.8s">
+											<!-- Question -->
+											<div class="card-header" role="tab" id="headingThree">
+												<h5 class="h5-sm">
+													<a class="collapsed" data-toggle="collapse" href="#collapseThree"
+														role="button" aria-expanded="false"
+														aria-controls="collapseThree" _msthash="318890"
+														_msttexthash="1914354">Submit Campaign to our team of
+														writers</a>
+												</h5>
+											</div>
+
+											<!-- Answer -->
+											<div id="collapseThree" class="collapse" role="tabpanel"
+												aria-labelledby="headingThree" data-parent="#accordion" _msthidden="4"
+												style="">
+												<div class="card-body" _msthidden="4">
+													<!-- Text -->
+													<p _msthash="525525" _msttexthash="27049347" _msthidden="1">
+														Input the details into our 3-minute form, and in
+														days, our 100+ person writing team will produce
+														your entire content marketing campaign in full for
+														review.
+													</p>
+												</div>
+											</div>
+										</div>
+										<!-- END QUESTION #3 -->
+
+										<!-- QUESTION #4 -->
+										<div class="card wow fadeInUp" data-wow-delay="1s"
+											style="visibility: visible; animation-delay: 1s">
+											<!-- Question -->
+											<div class="card-header" role="tab" id="headingFour">
+												<h5 class="h5-sm">
+													<a class="collapsed" data-toggle="collapse" href="#collapseFour"
+														role="button" aria-expanded="false" aria-controls="collapseFour"
+														_msthash="291590" _msttexthash="1315522">Can I buy just a single
+														campaign?</a>
+												</h5>
+											</div>
+
+											<!-- Answer -->
+											<div id="collapseFour" class="collapse" role="tabpanel"
+												aria-labelledby="headingFour" data-parent="#accordion" _msthidden="1">
+												<div class="card-body" _msthidden="1">
+													<!-- Text -->
+													<p _msthash="491049" _msttexthash="41938260" _msthidden="1">
+														We do not sell single campaigns. The reality is,
+														like any effective content marketing strategy, it
+														requires consistent content to be successful. We
+														want to ensure every customer is setup for success
+														from day 1.
+													</p>
+												</div>
+											</div>
+										</div>
+										<!-- END QUESTION #4 -->
+
+										<!-- QUESTION #5 -->
+										<div class="card wow fadeInUp" data-wow-delay="1.2s"
+											style="visibility: visible; animation-delay: 1.2s">
+											<!-- Question -->
+											<div class="card-header" role="tab" id="headingFive">
+												<h5 class="h5-sm">
+													<a class="collapsed" data-toggle="collapse" href="#collapseFive"
+														role="button" aria-expanded="false" aria-controls="collapseFive"
+														_msthash="286585" _msttexthash="1059591">Is it AI produced
+														content?</a>
+												</h5>
+											</div>
+
+											<!-- Answer -->
+											<div id="collapseFive" class="collapse" role="tabpanel"
+												aria-labelledby="headingFive" data-parent="#accordion" _msthidden="3"
+												style="">
+												<div class="card-body" _msthidden="3">
+													<!-- List -->
+													<p _msthash="491049" _msttexthash="41938260" _msthidden="1">
+														Nope, the article and blog post are handwritten by
+														in-house authors, and they use automation to help
+														craft the podcast, infographic, slideshow and
+														video.
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="card wow fadeInUp animated" data-wow-delay="1.2s" style="
+                          visibility: visible;
+                          animation-delay: 1.2s;
+                          animation-name: undefined;
+                        ">
+											<!-- Question -->
+											<div class="card-header" role="tab" id="headingFive">
+												<h5 class="h5-sm">
+													<a class="collapsed" data-toggle="collapse" href="#collapseSix"
+														role="button" aria-expanded="false" aria-controls="collapseSix"
+														_msthash="286585" _msttexthash="1059591">Can we pick where the
+														content is placed?</a>
+												</h5>
+											</div>
+
+											<!-- Answer -->
+											<div id="collapseSix" class="collapse" role="tabpanel"
+												aria-labelledby="headingSix" data-parent="#accordion" _msthidden="3"
+												style="">
+												<div class="card-body" _msthidden="3">
+													<!-- List -->
+													<p _msthash="491049" _msttexthash="41938260" _msthidden="1">
+														We do not support distribution to specific sites -
+														this is out of our control due to the various
+														syndication services we work with, and is normal
+														for other similar distribution companies (even if
+														they promise focusing on a specific location).
+														Each campaign is a little different and the exact
+														number of sites varies, and isn't particularly
+														important. It's typically the top 20 sites that
+														provide 80% of the benefit. Unless you were to
+														utilize our ‘Premium Distribution’ which will get
+														you guaranteed exposure in Yahoo Finance and 4
+														other 8 figure monthly traffic media sites.
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="card wow fadeInUp animated animated" data-wow-delay="1.2s" style="
+                          visibility: visible;
+                          animation-delay: 1.2s;
+                          animation-name: undefined;
+                        ">
+											<!-- Question -->
+											<div class="card-header" role="tab" id="headingSeven">
+												<h5 class="h5-sm">
+													<a class="collapsed" data-toggle="collapse" href="#collapseSeven"
+														role="button" aria-expanded="false"
+														aria-controls="collapseSeven" _msthash="286585"
+														_msttexthash="1059591">How long until I see results</a>
+												</h5>
+											</div>
+
+											<!-- Answer -->
+											<div id="collapseSeven" class="collapse" role="tabpanel"
+												aria-labelledby="headingSeven" data-parent="#accordion" _msthidden="3"
+												style="">
+												<div class="card-body" _msthidden="3">
+													<!-- List -->
+													<p _msthash="491049" _msttexthash="41938260" _msthidden="1">
+														You’ll see results within 24-48 hours of your Amp
+														campaign going live - but to get to brand
+														domination requires consistent campaigns stacked
+														up over time.
+													</p>
+												</div>
+											</div>
+										</div>
+										<!-- END QUESTION #5 -->
+									</div>
+									<!-- END ACCORDION -->
+								</div>
+								<!-- End col-x -->
+							</div>
+							<!-- END QUESTIONS HOLDER -->
+
+							<!-- MORE QUESTIONS BUTTON -->
+							<div class="row">
+								<div class="col-md-12 text-center more-questions">
+									<h5 _msthash="663754" _msttexthash="1350180">
+										Still have a question?
+										<font _mstmutation="1" _msthash="439010" _msttexthash="439010"
+											_istranslated="1">Ask your question here</font>
+									</h5>
+								</div>
+							</div>
+						</div>
+						<!-- End container -->
+					</section>
+					<!-- END FAQs-1 -->
+
+					<!-- BRANDS-2
+			============================================= -->
+					<div id="brands-2" class="bg-lightgrey brands-section division">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 text-center">
+									<!-- Title -->
+									<p class="p-lg grey-color" _msthash="721123" _msttexthash="2472769">
+										Used by startups, e-stores, web designers, and teams
+										including:
+									</p>
+
+									<ul class="brands-list">
+										<!-- BRAND LOGO IMAGE -->
+										<li class="brand-logo">
+											<img class="img-fluid" src="images/brand-1.png" alt="brand logo"
+												_mstalt="136721" />
+										</li>
+
+										<!-- BRAND LOGO IMAGE -->
+										<li class="brand-logo">
+											<img class="img-fluid" src="images/brand-2.png" alt="brand logo"
+												_mstalt="136721" />
+										</li>
+
+										<!-- BRAND LOGO IMAGE -->
+										<li class="brand-logo">
+											<img class="img-fluid" src="images/brand-3.png" alt="brand logo"
+												_mstalt="136721" />
+										</li>
+
+										<!-- BRAND LOGO IMAGE -->
+										<li class="brand-logo">
+											<img class="img-fluid" src="images/brand-4.png" alt="brand logo"
+												_mstalt="136721" />
+										</li>
+
+										<!-- BRAND LOGO IMAGE -->
+										<li class="brand-logo">
+											<img class="img-fluid" src="images/brand-5.png" alt="brand logo"
+												_mstalt="136721" />
+										</li>
+
+										<!-- BRAND LOGO IMAGE -->
+										<li class="brand-logo">
+											<img class="img-fluid" src="images/brand-6.png" alt="brand logo"
+												_mstalt="136721" />
+										</li>
+
+										<!-- BRAND LOGO IMAGE -->
+										<li class="brand-logo">
+											<img class="img-fluid" src="images/brand-7.png" alt="brand logo"
+												_mstalt="136721" />
+										</li>
+
+										<!-- BRAND LOGO IMAGE -->
+										<li class="brand-logo">
+											<img class="img-fluid" src="images/brand-8.png" alt="brand logo"
+												_mstalt="136721" />
+										</li>
+
+										<!-- BRAND LOGO IMAGE -->
+										<li class="brand-logo">
+											<img class="img-fluid" src="images/brand-9.png" alt="brand logo"
+												_mstalt="136721" />
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- End row -->
+						</div>
+						<!-- End container -->
+					</div>
+					<!-- END BRANDS-2 -->
+
+					<!-- BLOG-1
+			============================================= -->
+					<section id="blog-1" class="wide-60 blog-section division">
+						<div class="container">
+							<!-- SECTION TITLE -->
+							<div class="row">
+								<div class="col-lg-10 offset-lg-1 section-title wow fadeInUp" data-wow-delay="0.2s"
+									style="
+                      visibility: visible;
+                      animation-delay: 0.2s;
+                      animation-name: none;
+                    ">
+									<!-- Title 	-->
+									<h3 class="h3-lg" _msthash="658853" _msttexthash="595673">
+										Our Insights And Latest News
+									</h3>
+
+									<!-- Text -->
+									<p class="p-lg" _msthash="625378" _msttexthash="13175344">
+										Aliquam a augue suscipit, luctus neque purus ipsum neque
+										dolor primis libero Tempus, blandit posuere and ligula
+										varius magna a porta elementum massa risus
+									</p>
+								</div>
+							</div>
+							<!-- END SECTION TITLE -->
+
+							<!-- BLOG POSTS -->
+							<div class="row">
+								<!-- BLOG POST #1 -->
+								<div id="blog_post-1" class="col-md-6 col-lg-4">
+									<div class="blog-post wow fadeInUp" data-wow-delay="0.4s" style="
+                        visibility: visible;
+                        animation-delay: 0.4s;
+                        animation-name: none;
+                      ">
+										<!-- BLOG POST IMAGE -->
+										<div class="blog-post-img">
+											<img class="img-fluid" src="images/blog/post-1-img.jpg"
+												alt="blog-post-image" _mstalt="269126" />
+										</div>
+
+										<!-- BLOG POST TEXT -->
+										<div class="blog-post-txt">
+											<!-- Post Tag -->
+											<p class="post-read">
+												<i class="far fa-clock"></i>
+												<font _mstmutation="1" _msthash="631033" _msttexthash="138749">
+													- 12 min read
+												</font>
+											</p>
+
+											<!-- Post Link -->
+											<h5 class="h5-md">
+												<a href="single-post.html" _msthash="665717"
+													_msttexthash="2378233">Quisque sapien justo, aliquet non molestie a
+													purus
+													venenatis</a>
+											</h5>
+
+											<!-- Text -->
+											<p class="grey-color" _msthash="631501" _msttexthash="3874377">
+												Fringilla risus luctus mauris auctor purus euismod and
+												pretium purus pretium...
+											</p>
+
+											<!-- Post Data -->
+											<p class="post-data" _msthash="631735" _msttexthash="694304">
+												by <a href="#">Sean McMarthy</a> - 24 minutes ago
+											</p>
+											<p class="post-tag" _msthash="631852" _msttexthash="510445">
+												<a href="#">#SocialMedia</a>,
+												<a href="#">#Marketing</a>
+											</p>
+										</div>
+										<!-- END BLOG POST TEXT -->
+									</div>
+								</div>
+								<!-- END  BLOG POST #1 -->
+
+								<!-- BLOG POST #2 -->
+								<div id="blog_post-2" class="col-md-6 col-lg-4">
+									<div class="blog-post wow fadeInUp" data-wow-delay="0.6s" style="
+                        visibility: visible;
+                        animation-delay: 0.6s;
+                        animation-name: none;
+                      ">
+										<!-- BLOG POST IMAGE -->
+										<div class="blog-post-img">
+											<img class="img-fluid" src="images/blog/post-2-img.jpg"
+												alt="blog-post-image" _mstalt="269126" />
+										</div>
+
+										<!-- BLOG POST TEXT -->
+										<div class="blog-post-txt">
+											<!-- Post Tag -->
+											<p class="post-read">
+												<i class="far fa-clock"></i>
+												<font _mstmutation="1" _msthash="631462" _msttexthash="124059">
+													- 8 min read
+												</font>
+											</p>
+
+											<!-- Post Link -->
+											<h5 class="h5-md">
+												<a href="single-post.html" _msthash="666159"
+													_msttexthash="1835457">Tempor sapien donec gravida ipsum a porta
+													justo
+													vitae</a>
+											</h5>
+
+											<!-- Text -->
+											<p class="grey-color" _msthash="631930" _msttexthash="3168061">
+												Fringilla risus lucts auctor purus euismod and pretium
+												purus pretium...
+											</p>
+
+											<!-- Post Data -->
+											<p class="post-data" _msthash="632164" _msttexthash="571831">
+												by <a href="#">Ben Markton</a> - January 27, 2019
+											</p>
+											<p class="post-tag" _msthash="632281" _msttexthash="440609">
+												<a href="#">#Advice</a>,
+												<a href="#">#LinkBuilding</a>
+											</p>
+										</div>
+										<!-- END BLOG POST TEXT -->
+									</div>
+								</div>
+								<!-- END  BLOG POST #2 -->
+
+								<!-- BLOG POST #3 -->
+								<div id="blog_post-3" class="col-md-6 col-lg-4">
+									<div class="blog-post wow fadeInUp" data-wow-delay="0.8s" style="
+                        visibility: visible;
+                        animation-delay: 0.8s;
+                        animation-name: fadeInUp;
+                      ">
+										<!-- BLOG POST IMAGE -->
+										<div class="blog-post-img">
+											<img class="img-fluid" src="images/blog/post-3-img.jpg"
+												alt="blog-post-image" _mstalt="269126" />
+										</div>
+
+										<!-- BLOG POST TEXT -->
+										<div class="blog-post-txt">
+											<!-- Post Tag -->
+											<p class="post-read">
+												<i class="far fa-clock"></i>
+												<font _mstmutation="1" _msthash="631891" _msttexthash="138736">
+													- 21 min read
+												</font>
+											</p>
+
+											<!-- Post Link -->
+											<h5 class="h5-md">
+												<a href="single-post.html" _msthash="666601"
+													_msttexthash="2375555">Dapibus libero quisque eu tristique neque
+													blandit
+													Tristique</a>
+											</h5>
+
+											<!-- Text -->
+											<p class="grey-color" _msthash="632359" _msttexthash="3874377">
+												Fringilla risus luctus mauris auctor purus euismod and
+												pretium purus pretium...
+											</p>
+
+											<!-- Post Data -->
+											<p class="post-data" _msthash="632593" _msttexthash="521794">
+												by <a href="#">Caroline</a> - December 27, 2019
+											</p>
+											<p class="post-tag" _msthash="632710" _msttexthash="510809">
+												<a href="#">#LocalSEO</a>, <a href="#">#Marketing</a>,
+												<a href="#">#PPC</a>
+											</p>
+										</div>
+										<!-- END BLOG POST TEXT -->
+									</div>
+								</div>
+								<!-- END  BLOG POST #3 -->
+							</div>
+							<!-- END BLOG POSTS -->
+						</div>
+						<!-- End container -->
+					</section>
+					<!-- END BLOG-1 -->
+
+					<!-- CALL TO ACTION-6
+			============================================= -->
+					<section id="cta-6" class="bg-06 cta-section division">
+						<div class="container white-color">
+							<div class="row">
+								<!-- CALL TO ACTION TEXT -->
+								<div class="col-md-12">
+									<div class="cta-txt text-center">
+										<!-- Title -->
+										<h3 class="h3-lg" _msthash="860093" _msttexthash="884754">We create
+											ultra-SPECIFIC CONTENT about
+											your business on third-party websites that drives hyper-TARGETED TRAFIC and
+											sales.</h3>
+
+										<!-- Text -->
+										<p class="p-lg" _msthash="821301" _msttexthash="3075163">
+											We will give you a true assessment of your website</p>
+
+										<!-- CALL TO ACTION FORM -->
+										<div class="form-holder text-center">
+											<form name="seoform" class="row seo-form" novalidate="novalidate">
+												<!-- Form Input -->
+												<div id="input-email" class="col-lg-4">
+													<input type="text" name="email" class="form-control email"
+														placeholder="Your Email Address*" _mstplaceholder="321867">
+												</div>
+
+												<!-- Form Input -->
+												<div id="input-url" class="col-lg-4">
+													<input type="url" name="url" class="form-control url"
+														placeholder="Your Website*" value="http://www."
+														_mstplaceholder="190593">
+												</div>
+
+												<!-- Form Button -->
+												<div class="col-lg-4 form-btn">
+													<button type="submit" class="btn btn-primary tra-white-hover submit"
+														_msthash="2206464" _msttexthash="432549">Submit</button>
+												</div>
+
+												<!-- Form Message -->
+												<div class="col-lg-12 seo-form-msg">
+													<span class="loading"></span>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+								<!-- END CALL TO ACTION TEXT -->
+							</div>
+							<!-- End row -->
+						</div>
+						<!-- End container -->
+					</section>
+					<!-- END CALL TO ACTION-6 -->
+
+					<!-- FOOTER-2
+			============================================= -->
+					<footer id="footer-2" class="pt-100 footer division">
+						<div class="container">
+							<!-- FOOTER CONTENT -->
+							<div class="row">
+								<!-- FOOTER INFO -->
+								<div class="col-md-10 col-lg-4">
+									<div class="footer-info mb-40">
+										<!-- Footer Logo -->
+										<!-- For Retina Ready displays take a image with double the amount of pixels that your image will be displayed (e.g 364 x 90 pixels) -->
+										<img src="images/logo.png" width="182" height="45" alt="footer-logo"
+											_mstalt="175981">
+
+										<!-- Text -->
+										<p _msthash="997113" _msttexthash="8921406">With unique content research,
+											creation, and distribution
+											capability - in combination with the high authority of the sites we publish
+											our content to, we
+											can get highly targeted exposure for any brand, product, or service.</p>
+									</div>
+								</div>
+
+								<!-- FOOTER PRODUCTS LINKS -->
+								<div class="col-md-3 col-lg-2 col-xl-2">
+									<div class="footer-links mb-40">
+										<!-- Title -->
+										<h5 class="h5-sm" _msthash="1040871" _msttexthash="154401">
+											Quick Links
+										</h5>
+
+										<!-- Footer Links -->
+										<ul class="foo-links clearfix">
+											<li>
+												<a href="about-us.html" _msthash="1303237" _msttexthash="93587">About
+													Us</a>
+											</li>
+											<li>
+												<a href="contacts.html" _msthash="1303367" _msttexthash="177606">Contact
+													Us</a>
+											</li>
+											<li>
+												<a href="services.html" _msthash="1303497"
+													_msttexthash="120874">Services</a>
+											</li>
+											<li>
+												<a href="#" _msthash="1303627" _msttexthash="208910">Testimonials</a>
+											</li>
+											<li>
+												<a href="blog-listing.html" _msthash="1303757"
+													_msttexthash="174187">From the Blog</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+								<!-- FOOTER COMPANY LINKS -->
+								<div class="col-md-4 col-lg-3 col-xl-3">
+									<div class="footer-links mb-40">
+										<!-- Title -->
+										<h5 class="h5-sm" _msthash="1041443" _msttexthash="315224">
+											Featured Services
+										</h5>
+
+										<!-- Footer Links -->
+										<ul class="clearfix">
+											<li>
+												<a href="contacts.html" _msthash="1303939" _msttexthash="97084">Local
+													SEO</a>
+											</li>
+											<li>
+												<a href="contacts.html" _msthash="1304069" _msttexthash="436943">Social
+													Media Marketing</a>
+											</li>
+											<li>
+												<a href="contacts.html" _msthash="1304199" _msttexthash="471289">Pay Per
+													Click Management</a>
+											</li>
+											<li>
+												<a href="contacts.html" _msthash="1304329" _msttexthash="607958">Search
+													Engine Optimization</a>
+											</li>
+											<li>
+												<a href="contacts.html" _msthash="1304459" _msttexthash="271895">Free
+													SEO Analysis</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+								<!-- FOOTER NEWSLETTER FORM -->
+								<div class="col-md-5 col-lg-3 col-xl-3">
+									<div class="footer-form mb-20">
+										<!-- Title -->
+										<h5 class="h5-sm" _msthash="1042015" _msttexthash="228865">
+											Follow the Best
+										</h5>
+
+										<!-- Newsletter Form Input -->
+										<form class="newsletter-form" novalidate="true">
+											<div class="input-group">
+												<input type="email" class="form-control" placeholder="Email Address"
+													required="" id="s-email" name="EMAIL" _mstplaceholder="198861">
+												<span class="input-group-btn">
+													<button type="submit" class="btn">
+														<i class="far fa-arrow-alt-circle-right"></i>
+													</button>
+												</span>
+											</div>
+
+											<!-- Newsletter Form Notification -->
+											<label for="s-email" class="form-notification"></label>
+										</form>
+									</div>
+								</div>
+								<!-- END FOOTER NEWSLETTER FORM -->
+							</div>
+							<!-- END FOOTER CONTENT -->
+
+							<!-- BOTTOM FOOTER -->
+							<div class="bottom-footer">
+								<div class="row">
+									<!-- FOOTER COPYRIGHT -->
+									<div class="col-lg-8">
+										<ul class="bottom-footer-list">
+											<li>
+												<p _msthash="1524302" _msttexthash="422110">
+													© Copyright Media Force Agency 2022
+												</p>
+											</li>
+											<li>
+												<p>
+													<a href="tel:123456789" _msthash="1524484"
+														_msttexthash="102882">508.746.9892</a>
+												</p>
+											</li>
+											<li>
+												<p class="last-li">
+													<a href="mailto:support@brightestmoment.com" _msthash="1524666"
+														_msttexthash="298558">support@brightestmoment.com</a>
+												</p>
+											</li>
+										</ul>
+									</div>
+
+									<!-- FOOTER SOCIALS LINKS -->
+									<div class="col-lg-4 text-right">
+										<ul class="foo-socials text-center clearfix">
+											<li>
+												<a href="#" class="ico-facebook"><i class="fab fa-facebook-f"></i></a>
+											</li>
+											<li>
+												<a href="#" class="ico-twitter"><i class="fab fa-twitter"></i></a>
+											</li>
+											<li>
+												<a href="#" class="ico-google-plus"><i
+														class="fab fa-google-plus-g"></i></a>
+											</li>
+											<li>
+												<a href="#" class="ico-tumblr"><i class="fab fa-tumblr"></i></a>
+											</li>
+
+											<!--
+																		<li><a href="#" class="ico-behance"><i class="fab fa-behance"></i></a></li>	
+																		<li><a href="#" class="ico-dribbble"><i class="fab fa-dribbble"></i></a></li>									
+																		<li><a href="#" class="ico-instagram"><i class="fab fa-instagram"></i></a></li>	
+																		<li><a href="#" class="ico-linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+																		<li><a href="#" class="ico-pinterest"><i class="fab fa-pinterest-p"></i></a></li>								
+																		<li><a href="#" class="ico-youtube"><i class="fab fa-youtube"></i></a></li>										
+																		<li><a href="#" class="ico-vk"><i class="fab fa-vk"></i></a></li>
+																		<li><a href="#" class="ico-yelp"><i class="fab fa-yelp"></i></a></li>
+																		<li><a href="#" class="ico-yahoo"><i class="fab fa-yahoo"></i></a></li>
+																	    -->
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- END BOTTOM FOOTER -->
+						</div>
+						<!-- End container -->
+					</footer>
+					<!-- END FOOTER-2 -->
+				</div>
+				<!-- END PAGE CONTENT -->
+
+				<!-- EXTERNAL SCRIPTS
+		============================================= -->
+				<script src="js/jquery-3.3.1.min.js"></script>
+				<script src="js/bootstrap.min.js"></script>
+				<script src="js/modernizr.custom.js"></script>
+				<script src="js/jquery.easing.js"></script>
+				<script src="js/jquery.appear.js"></script>
+				<script src="js/menu.js"></script>
+				<script src="js/materialize.js"></script>
+				<script src="js/jquery.scrollto.js"></script>
+				<script src="js/imagesloaded.pkgd.min.js"></script>
+				<script src="js/isotope.pkgd.min.js"></script>
+				<script src="js/jquery.flexslider.js"></script>
+				<script src="js/owl.carousel.min.js"></script>
+				<script src="js/jquery.magnific-popup.min.js"></script>
+				<script src="js/seo-form.js"></script>
+				<script src="js/contact-form.js"></script>
+				<script src="js/comment-form.js"></script>
+				<script src="js/jquery.validate.min.js"></script>
+				<script src="js/jquery.ajaxchimp.min.js"></script>
+				<script src="js/wow.js"></script>
+
+				<!-- Custom Script -->
+				<script src="js/custom.js"></script>
+
+				<script>
+					new WOW().init();
+				</script>
+
+				<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+				<!-- [if lt IE 9]>
+			<script src="js/html5shiv.js" type="text/javascript"></script>
+			<script src="js/respond.min.js" type="text/javascript"></script>
+		<![endif] -->
+
+				<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information. -->
+				<!--
+		<script>
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', 'UA-XXXXX-Y', 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script async src='https://www.google-analytics.com/analytics.js'></script>
+		-->
+				<!-- End Google Analytics -->
+			</div>
+			<a id="scrollUp" href="#top" title="" style="position: fixed; z-index: 99999; display: inline"></a>
+		</div>
+		<a id="scrollUp" href="#top" title=""></a>
+	</div>
+	<a id="scrollUp" href="#top" title=""></a>
+	<div id="pouch-root" style="display: block"></div>
+</body>
+
+</html>

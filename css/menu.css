@@ -1646,3 +1646,13 @@ video {
   width: auto !important;
   height: auto !important;
 }
+.play-btn-primary .video-play-button:after {
+    background: #f2734d !important;
+}
+.btn-green, .scroll .btn-green, .white-color .btn-green {
+    color: #fff!important;
+    background-color: #20ab5c;
+    border-color: #20ab5c;
+    background-image: linear-gradient( 135deg, rgb(249, 170, 96) 0%, rgb(240, 90, 70) 100% );
+    border: 0 !important;
+}

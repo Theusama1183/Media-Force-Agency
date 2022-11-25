@@ -1668,7 +1668,7 @@ video {
 .btn-green, .scroll .btn-green, .white-color .btn-green {
     color: #fff!important;
     background-color: #20ab5c;
-    border-color: #20ab5c;
+    border:0px !important;
     background-image: linear-gradient( 135deg, rgb(249, 170, 96) 0%, rgb(240, 90, 70) 100% ) !important;
 }
 

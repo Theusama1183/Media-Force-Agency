@@ -1716,3 +1716,24 @@ video {
     color: white;
     border: 1px solid #dee2e6 !important;
 }
+p.vert-center-child.m-0 {
+    font-size: 14px;
+    font-weight: 400;
+}
+@media only screen and (max-width: 600px) {
+  .row.row-relative.pricing-comparison-editions.feature-comparison-header.bg-white {
+    display: block;
+}
+.col.col-sm-5.col-md-4.col-lg-5.col-border-both.button-parsys.border.border-lightgrey {
+    display: flex;
+    justify-content: center;
+}
+.col.col-sm-3.h4.text-center.edition-container.col-border-both.h-100 {
+    width: 15%;
+    height: 70px !important;
+}
+p.vert-center-child.m-0 {
+    font-size: 14px;
+    font-weight: 400;
+}
+}

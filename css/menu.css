@@ -1695,3 +1695,20 @@ video {
     width: 100%;
     height: auto;
 }
+.buttonCTAComponent.parbase.section {
+    min-height: 95px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+.vert-center-parent {
+    min-height: 95px;
+    display: flex;
+    align-items: center;
+}
+
+.col.col-sm-3.h4.text-center.edition-container.col-border-both {
+    background: #212459;
+    color: white;
+    border: 1px solid;
+}

@@ -1736,4 +1736,7 @@ p.vert-center-child.m-0 {
     font-size: 14px;
     font-weight: 400;
 }
+  .col {
+    flex-basis: auto;
+}
 }

@@ -77,13 +77,3 @@ jQuery(function () {
 //   }
 // }
 
-$(function(){
-  $(window).scroll(function(e) {
-    if($(this).scrollTop()>3000){
-      $('#pricing-hearder').fadeOut(); // Fading in the button on scroll after 150px
-    }
-    else{
-      $('$pricing-hearder').fadeIn(); // Fading out the button on scroll if less than 150px
-    }
-  });
-});

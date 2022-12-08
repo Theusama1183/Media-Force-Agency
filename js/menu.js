@@ -79,7 +79,7 @@ jQuery(function () {
 
 $(function(){
   $(window).scroll(function(e) {
-    if($(this).scrollTop()>300){
+    if($(this).scrollTop()>3000){
       $('#pricing-hearder').fadeOut(); // Fading in the button on scroll after 150px
     }
     else{

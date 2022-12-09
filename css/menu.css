@@ -1770,9 +1770,10 @@ p.vert-center-child.m-0 {
 }
 
 .price-features .price-header {
-  background-color: #fff;
-  color: #000;
-  font-size: 25px;
+    background-color: #fff;
+    color: #000;
+    font-size: 25px;
+    height: 110px;
 }
 
 .price-features li {

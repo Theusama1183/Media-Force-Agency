@@ -1740,3 +1740,12 @@ p.vert-center-child.m-0 {
     flex-basis: auto !important;
 }
 }
+.project-3 .project-data {
+    height: 100% !Important;
+}
+
+.project-data p.h5-md {
+    max-height: 100%;
+    -webkit-box-orient: unset;
+    
+}

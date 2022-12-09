@@ -1802,3 +1802,6 @@ p.vert-center-child.m-0 {
     width: 100%;
   }
 }
+li.service-logo {
+    padding: 10px;
+}
